@@ -12,11 +12,16 @@
   <body>
 
     <nav>
+      <% if user_signed_in? %>
+        <p> Welcome, <%= current_user.email %>  | 
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %> 
+        </p>
+        <hr>
+      <% end %>
       <%= link_to "Welcome", root_path %>
       <%= link_to "Shop", products_path %>
       <%= link_to "About", about_path %>
     </nav>
-    
     <hr>
     <%= yield %>
   </body>
