@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Product.delete_all
+
+(1..2).each do |i|
+    temp = Product.create(
+        title: "Camo #{i}" ,
+        price: 20 ,
+        description: "Camo for special forces #{i}" ,
+        user: User.first
+    )
+    temp.image.attach(
+        io: File.open("tmp/img/#{i}.jpg"),
+        filename: "file.jpg"
+    )  
+end
+
