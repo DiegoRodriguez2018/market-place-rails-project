@@ -67,7 +67,7 @@ Screenshots of Trello board(s)
     ```
 
 
-##### Answers to the 24 Questions
+# Answers to the 24 Questions
 
 
 
