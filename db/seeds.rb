@@ -15,8 +15,9 @@ Product.delete_all
         description: "Camo for special forces #{i}" ,
         user: User.first
     )
+    file = Rails.root.join('tmp','img',"#{i}.jpg") 
     temp.image.attach(
-        io: File.open("tmp/img/#{i}.jpg"),
+        io: File.open(file),
         filename: "file.jpg"
     )  
 end
