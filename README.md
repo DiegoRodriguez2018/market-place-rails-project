@@ -1,6 +1,75 @@
-<!-- To demonstrate your knowledge you are required to answer a set of short questions. In your README.md file create a heading for each of the questions below and provide answers inline, -->
-
 # README
+
+## Website URL
+```Insert Published URL link```
+
+### Github Repository
+```Insert GitHub Repository Link```
+
+## Project Description
+
+
+##### | Problems Encountered |
+```
+
+define problems
+
+```
+##### | Purpose |
+```
+
+website purpose
+
+```
+#####  | Functionality |
+```
+
+website Functionality
+
+```
+##### | features |
+```
+
+website features
+
+```
+##### | Screenshots |
+```
+
+INSERT Screenshots
+
+```
+#### | Tech Stack |
+```
+
+(e.g. html, css, deployment platform, etc)
+
+```
+#### | Setup & Configuration Instructions|
+```
+
+    Instructions on how to setup, configure and use your App.
+
+```
+## Design Documentation
+```
+Design process
+User stories
+A workflow diagram of the user journey/s.
+Wireframes
+Database Entity Relationship Diagrams
+```
+## Details of planning process
+```
+including,
+Project plan & timeline
+Screenshots of Trello board(s)
+    ```
+
+
+##### Answers to the 24 Questions
+
+
 
 #### 1. What is the need (i.e. challenge) that you will be addressing in your project?
 
@@ -13,7 +82,7 @@
 
 #### 3. Describe the project you will be conducting and how your App will address these needs.
 
-* We will be building a two sided marketplace that offers a location for users to buy, sell and trade camouflage clothing and items. It will also provide users with information pertaining to all aspect of DPM. 
+* We will be building a two sided marketplace that offers a location for users to buy, sell and trade camouflage clothing and items. It will also provide users with information pertaining to all aspects of DPM.
 
 #### 4. Describe the network infrastructure the App may be based on.
 #### 5. Identify nd describe the software to be used in your App.
