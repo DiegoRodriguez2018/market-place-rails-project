@@ -1,17 +1,20 @@
+<!-- To demonstrate your knowledge you are required to answer a set of short questions. In your README.md file create a heading for each of the questions below and provide answers inline, -->
+
 # README
 
-T#### 1. What is the need (i.e. challenge) that you will be addressing in your project?
+  #### 1. What is the need (i.e. challenge) that you will be addressing in your project?
 
-        * To build a marketplace where users can buy, sell, trade camouflage patterns, clothing and related products.
-          The website will also provide a database on various camouflage related history and patterns.
+* To build a marketplace where users can buy, sell, trade camouflage patterns, clothing and related products.
+
+* The website will also provide a database on various camouflage related history and patterns.
 
     #### 2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
 
-         * Currently no purely camouflage orientated marketplace exists.
+* Currently no purely camouflage orientated marketplace exists.
 
     #### 3. Describe the project will you be conducting and how. your App will address the needs.
     #### 4. Describe the network infrastructure the App may be based on.
-    #### 5. Identify and describe the software to be used in your App.
+    #### 5. Identify nd describe the software to be used in your App.
     #### 6. Identify the database to be used in your App and provide a justification for your choice.
     #### 7. Identify and describe the production database setup (i.e. postgres instance).
     #### 8. Describe the architecture of your App.
