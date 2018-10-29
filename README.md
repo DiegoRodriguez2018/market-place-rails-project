@@ -64,9 +64,12 @@ Database Entity Relationship Diagrams
 including,
 Project plan & timeline
 Screenshots of Trello board(s)
-    ```
+```
+
+![Image](lib/assets/screencapture-github-DiegoRodriguez2018-market-place-rails-project-projects-1-2018-10-29-15_37_05.png)"Day 1 GutHub Projects Board"
 
 
+___________________________________________________
 # Answers to the 24 Questions
 
 
