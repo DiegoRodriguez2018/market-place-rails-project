@@ -1,51 +1,57 @@
 # README
 
 ## Website URL
-```Insert Published URL link```
+https://camo-market.herokuapp.com/users/sign_in
 
 ### Github Repository
-```Insert GitHub Repository Link```
-
+https://github.com/DiegoRodriguez2018/market-place-rails-project
+___________________________________________________
 ## Project Description
+```
+
+Enter description
+
+```
 
 
-##### | Problems Encountered |
+#####  Problems Encountered
+
 ```
 
 define problems
 
 ```
-##### | Purpose |
+#####  Purpose
 ```
 
 website purpose
 
 ```
-#####  | Functionality |
+#####   Functionality
 ```
 
 website Functionality
 
 ```
-##### | features |
+#####  features
 ```
 
 website features
 
 ```
-##### | Screenshots |
+#####  Screenshots
 ```
 
 INSERT Screenshots
 
 ```
-#### | Tech Stack |
+####  Tech Stack
 ```
 
 (e.g. html, css, deployment platform, etc)
 
 ```
-#### | Setup & Configuration Instructions|
+####  Setup & Configuration Instructions
 ```
 
     Instructions on how to setup, configure and use your App.
@@ -64,9 +70,12 @@ Database Entity Relationship Diagrams
 including,
 Project plan & timeline
 Screenshots of Trello board(s)
-    ```
+```
+
+![Image](lib/assets/screencapture-github-DiegoRodriguez2018-market-place-rails-project-projects-1-2018-10-29-15_37_05.png)"Day 1 GutHub Projects Board"
 
 
+___________________________________________________
 # Answers to the 24 Questions
 
 
@@ -104,3 +113,8 @@ Screenshots of Trello board(s)
 #### 21. Discuss and analyse requirements related to information system security.
 #### 22. Discuss methods you will use to protect information and data.
 #### 23. Research what your legal obligations are in relation to handling user data.
+
+Authors:
+Sam Ludwig
+Diago DiegoRodriguez
+Eathan Langford
