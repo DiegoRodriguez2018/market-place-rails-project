@@ -109,6 +109,7 @@ Screenshots of Trello board(s)
 ![Image](readme-images/githubprojects1.png) GitHub Projects Board 1
 ![Image](readme-images/githubprojects2.png) Github Projects Board 2
 ![Image](readme-images/githubprojects3.png) Github Projects Board 3
+![Image](readme-images/githubprojects4.png) Github Projects Board 4
 
 ___________________________________________________
 # Answers to the 24 Questions

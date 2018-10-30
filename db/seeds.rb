@@ -9,14 +9,15 @@
 User.delete_all
 Category.delete_all
 Product.delete_all
+Order.delete_all
 
 User.create(email:"userone@gmail.com", password:"123456")
 
-(1..5).each do |i|
+(1..15).each do |i|
     Category.create(name: "Category ##{i}")
 end
 
-(1..5).each do |i|
+(1..15).each do |i|
     temp = Product.create(
         title: "Camo fabric #{i}" ,
         price: 20 + i ,
@@ -32,3 +33,11 @@ end
     )  
 end
 
+(1..5).each do |i|
+    Order.create(user: User.first,
+        shipping_address: "address ##{i}",
+        product: Product.find(i),
+        product_title: Product.find(i).title,
+        product_price: Product.find(i).price,
+        quantity: i)
+end
