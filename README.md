@@ -13,10 +13,11 @@ Enter description
 
 ```
 
-
+___________________________________________________
 #####  Problems Encountered
 
-1. Local image seeding: One of the first problems we encountered is how to locally seed images with Active Storage. After getting familiar with the tool and reading some documentation we figure out we had to store it in a temporal variable and use the attach method in our seeds.rb file as shown below:
+
+* Local image seeding: One of the first problems we encountered is how to locally seed images with Active Storage. After getting familiar with the tool and reading some documentation we figure out we had to store it in a temporal variable and use the attach method in our seeds.rb file as shown below:
    ``` ruby
     (1..n).each do |i|
         temp = Product.create(
@@ -25,43 +26,47 @@ Enter description
             description: "Image number  #{i}" ,
             user: User.first
         )
-        file = Rails.root.join('db','img',"#{i}.jpg") 
+        file = Rails.root.join('db','img',"#{i}.jpg")
         temp.image.attach(
             io: File.open(file),
             filename: "file.jpg"
         )  
     end
     ```
-After running `rails db:seed`, the files were succesfully added to our database. 
+*After running `rails db:seed`, the files were successfully added to our database.*
 
-2. Heroku Image Seeding: The next challenge was to seed some images in the heroku repository. The process was pretty much the same with the only difference we had to run `heroku run rails db:seed`
+* Heroku Image Seeding: The next challenge was to seed some images in the Heroku repository. The process was pretty much the same with the only difference we had to run Heroku run rails db:seed`
 
 
-
+___________________________________________________
 #####  Purpose
 ```
 
 website purpose
 
 ```
+___________________________________________________
 #####   Functionality
 ```
 
 website Functionality
 
 ```
+___________________________________________________
 #####  features
 ```
 
 website features
 
 ```
+___________________________________________________
 #####  Screenshots
 ```
 
 INSERT Screenshots
 
 ```
+___________________________________________________
 ####  Tech Stack
 ```
 
@@ -78,28 +83,36 @@ INSERT Screenshots
 
 
 ```
+___________________________________________________
 ####  Setup & Configuration Instructions
 ```
 
     Instructions on how to setup, configure and use your App.
 
 ```
+___________________________________________________
 ## Design Documentation
 ```
 Design process
-User stories
-A workflow diagram of the user journey/s.
 Wireframes
-Database Entity Relationship Diagrams
 ```
+___________________________________________________
 
-1. Database Design:
-    1. ERD: After discussing about our database structure we agreed to the following databse structure:
-        ![img](readme-images/database-design.png)
-    2. Infrastructure: As our heroku app server is based in the US, we decided to base our AWS server in the US as well (us-east-1). As the servers are going to be located close to eachother we hope the performace of our web app to be improved. 
+###### User Stories and Workflow diagram:
+* This is the UserStories and Workflow digram we created in figma.
 
+![img](readme-images/groupuser.png)
 
-## Details of planning process
+___________________________________________________
+
+###### Database Design:
+* ERD: After discussing about our database structure we agreed to the following database structure:
+
+![img](readme-images/database-design.png)
+* Infrastructure: As our Heroku app server is based in the US, we decided to base our AWS server in the US as well (us-east-1). As the servers are going to be located close to each other we hope the performance of our web app to be improved.
+
+___________________________________________________
+### Details of planning process:
 ```
 including,
 Project plan & timeline
