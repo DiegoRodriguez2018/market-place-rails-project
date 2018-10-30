@@ -26,6 +26,13 @@
     <%= form.text_area :description %>
   </div>
 
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= select_tag(:category, options_for_select(@select_options,@select_options.length)) %>
+  
+  </div>
+
   <div class="field">
     <%= form.label :image %>
     <%= form.file_field :image %>
@@ -34,4 +41,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>

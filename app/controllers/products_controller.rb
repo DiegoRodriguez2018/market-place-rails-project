@@ -16,6 +16,10 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+    @select_options = []
+    Category.all.each_with_index do |category, index| 
+      @select_options.push([category.name,index+1]) 
+    end 
   end
 
   # GET /products/1/edit
@@ -27,7 +31,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     @product.user = current_user
-    
+    @product.category = Category.find(params[:category].to_i)
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
@@ -71,6 +75,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:title, :price, :description, :image)
+      params.require(:product).permit(:title, :price, :description, :image, :category)
     end
 end
