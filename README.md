@@ -16,11 +16,28 @@ Enter description
 
 #####  Problems Encountered
 
-```
+1. Local image seeding: One of the first problems we encountered is how to locally seed images with Active Storage. After getting familiar with the tool and reading some documentation we figure out we had to store it in a temporal variable and use the attach method in our seeds.rb file as shown below:
+   ``` ruby
+    (1..n).each do |i|
+        temp = Product.create(
+            title: "Image #{i}" ,
+            price: 20 ,
+            description: "Image number  #{i}" ,
+            user: User.first
+        )
+        file = Rails.root.join('db','img',"#{i}.jpg") 
+        temp.image.attach(
+            io: File.open(file),
+            filename: "file.jpg"
+        )  
+    end
+    ```
+After running `rails db:seed`, the files were succesfully added to our database. 
 
-define problems
+2. Heroku Image Seeding: The next challenge was to seed some images in the heroku repository. The process was pretty much the same with the only difference we had to run `heroku run rails db:seed`
 
-```
+
+
 #####  Purpose
 ```
 
@@ -50,6 +67,16 @@ INSERT Screenshots
 
 (e.g. html, css, deployment platform, etc)
 
+* HTML
+* CSS
+* Ruby on Rails
+* Amazon Web Services
+* Heroku
+* Devise
+* Pundit
+
+
+
 ```
 ####  Setup & Configuration Instructions
 ```
@@ -65,6 +92,11 @@ A workflow diagram of the user journey/s.
 Wireframes
 Database Entity Relationship Diagrams
 ```
+
+1. Database Design:
+    1. ERD: After discussing about our database structure we agreed to 
+    2. Infrastructure: As our heroku app server is based in the US, we decided to base our AWS server in the US as well (us-east-1). As the servers are going to be located close to eachother we hope the performace of our web app to be improved. 
+
 ## Details of planning process
 ```
 including,
@@ -72,8 +104,8 @@ Project plan & timeline
 Screenshots of Trello board(s)
 ```
 
-![Image](lib/assets/screencapture-github-DiegoRodriguez2018-market-place-rails-project-projects-1-2018-10-29-15_37_05.png)"Day 1 GutHub Projects Board"
-
+![Image](readme-images/githubprojects1.png) GitHub Projects Board 1
+![Image](readme-images/githubprojects2.png) Github Projects Board 2
 
 ___________________________________________________
 # Answers to the 24 Questions
