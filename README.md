@@ -101,7 +101,7 @@ ___________________________________________________
 ###### User Stories and Workflow diagram:
 * This is the UserStories and Workflow digram we created in figma.
 
-![img](readme-images/groupuser.png)
+![img](readme-images/stories.png)
 
 ___________________________________________________
 
