@@ -21,7 +21,7 @@ end
         title: "Camo fabric #{i}" ,
         price: 20 + i ,
         description: "Camo for special forces #{i}" ,
-        stock: i*10
+        stock: i*10,
         user: User.first,
         category: Category.find(i),
     )
