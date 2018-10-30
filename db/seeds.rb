@@ -6,16 +6,26 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.delete_all
+Category.delete_all
 Product.delete_all
 
-(1..2).each do |i|
+User.create(email:"userone@gmail.com", password:"123456")
+
+(1..5).each do |i|
+    Category.create(name: "Category ##{i}")
+end
+
+(1..5).each do |i|
     temp = Product.create(
-        title: "Camo #{i}" ,
-        price: 20 ,
+        title: "Camo fabric #{i}" ,
+        price: 20 + i ,
         description: "Camo for special forces #{i}" ,
-        user: User.first
+        stock: i*10,
+        user: User.first,
+        category: Category.find(i),
     )
-    file = Rails.root.join('db','img',"#{i}.jpg") 
+    file = Rails.root.join('db','img',"1.jpg") 
     temp.image.attach(
         io: File.open(file),
         filename: "file.jpg"

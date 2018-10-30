@@ -98,6 +98,7 @@ Database Entity Relationship Diagrams
         ![img](readme-images/database-design.png)
     2. Infrastructure: As our heroku app server is based in the US, we decided to base our AWS server in the US as well (us-east-1). As the servers are going to be located close to eachother we hope the performace of our web app to be improved. 
 
+
 ## Details of planning process
 ```
 including,
@@ -107,6 +108,7 @@ Screenshots of Trello board(s)
 
 ![Image](readme-images/githubprojects1.png) GitHub Projects Board 1
 ![Image](readme-images/githubprojects2.png) Github Projects Board 2
+![Image](readme-images/githubprojects3.png) Github Projects Board 3
 
 ___________________________________________________
 # Answers to the 24 Questions
