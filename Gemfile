@@ -64,3 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "aws-sdk-s3", require: false
 
 gem "devise", "~> 4.5"
+
+gem "dotenv", "~> 2.5", groups: [:development, :test]
+gem 'jquery-rails'
+gem "bootstrap", "~> 4.1"
