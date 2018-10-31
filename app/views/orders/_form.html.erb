@@ -2,7 +2,6 @@
   <% if order.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
-
       <ul>
       <% order.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,9 +10,10 @@
     </div>
   <% end %>
 
+  <p>Hi <%=current_user.email %>, please fill the form below to continue with your purchase. </p>
+
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%=hidden_field_tag :user, current_user %>
   </div>
 
   <div class="field">
@@ -22,18 +22,15 @@
   </div>
 
   <div class="field">
-    <%= form.label :product_id %>
-    <%= form.text_field :product_id %>
+    <%=hidden_field_tag :product_id, params[:product_id] %>
   </div>
 
   <div class="field">
-    <%= form.label :product_title %>
-    <%= form.text_field :product_title %>
+    <%=hidden_field_tag :product_title, Product.find(params[:product_id]).title %>
   </div>
 
   <div class="field">
-    <%= form.label :product_price %>
-    <%= form.text_field :product_price %>
+    <%=hidden_field_tag :product_price, Product.find(params[:product_id]).price %>
   </div>
 
   <div class="field">

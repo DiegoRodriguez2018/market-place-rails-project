@@ -6,16 +6,18 @@
 
   <tbody>
 
-  <% @categories.each do |category| %>
+  <% @categories.each do | category| %>
           <h3><%= category.name %></h3>
           <br>
           <% category.products.each do |product| %>
           
-          <%= link_to image_tag(product.image, width: '100'), product_path(product) %> 
+          <% if product.image.nil? == false %>
+            <%= link_to image_tag(product.image, width: '100'), product_path(product) %> 
+          <% end %>
           <br>
           <%=link_to product.title , product_path(product)%>
           <br>
-          Price: <%= product.price %>
+          Price: <%= number_to_currency(product.price/100.0) %>
           <br>
           <br>
         <% end %>
