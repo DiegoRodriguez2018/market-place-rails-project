@@ -21,7 +21,7 @@ Category.create(name: "Urban")
 (1..15).each do |i|
     temp = Product.create(
         title: "Camo fabric #{i}" ,
-        price: 20 + i ,
+        price: 5000 ,
         description: "Camo for special forces #{i}" ,
         stock: i*10,
         user: User.first,
