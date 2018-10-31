@@ -11,9 +11,10 @@
     </div>
   <% end %>
 
+  <p>Hi <%=current_user.email %>, please fill the form below to continue with your purchase. </p>
+
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%=hidden_field_tag :user, current_user %>
   </div>
 
   <div class="field">
