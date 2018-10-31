@@ -1,11 +1,13 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!  
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_select_options, only: [:new, :edit, :update]
 
   # GET /products
   # GET /products.json
   def index
     @products = Product.all
+    @categories = Category.all
   end
 
   # GET /products/1
@@ -16,10 +18,6 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
-    @select_options = []
-    Category.all.each_with_index do |category, index| 
-      @select_options.push([category.name,index+1]) 
-    end 
   end
 
   # GET /products/1/edit
@@ -71,6 +69,14 @@ class ProductsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
+    end
+
+    def set_select_options
+     #Select options for generating the select tag in new and edit views. 
+     @select_options = []
+     Category.all.each_with_index do |category, index| 
+       @select_options.push([category.name,index+1]) 
+     end 
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -13,9 +13,10 @@ Order.delete_all
 
 User.create(email:"userone@gmail.com", password:"123456")
 
-(1..15).each do |i|
-    Category.create(name: "Category ##{i}")
-end
+Category.create(name: "Snow")
+Category.create(name: "Woodland and Jungle")
+Category.create(name: "Dessert and Beach")
+Category.create(name: "Urban")
 
 (1..15).each do |i|
     temp = Product.create(
@@ -24,7 +25,7 @@ end
         description: "Camo for special forces #{i}" ,
         stock: i*10,
         user: User.first,
-        category: Category.find(i),
+        category: Category.order("RANDOM()").first
     )
     file = Rails.root.join('db','img',"1.jpg") 
     temp.image.attach(
