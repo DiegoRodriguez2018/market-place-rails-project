@@ -26,11 +26,14 @@
     <%= form.text_area :description %>
   </div>
 
+  <div class="field">
+    <%= form.label :stock %>
+    <%= form.number_field :stock %>
+  </div>
 
   <div class="field">
     <%= form.label :category %>
     <%= select_tag(:category, options_for_select(@select_options,@select_options.length)) %>
-  
   </div>
 
   <div class="field">
