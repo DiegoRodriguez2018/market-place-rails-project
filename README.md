@@ -166,5 +166,5 @@ ___________________________________________________
 
 Authors:
 Sam Ludwig
-Diago DiegoRodriguez
+Diego Rodriguez
 Eathan Langford

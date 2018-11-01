@@ -23,22 +23,19 @@
 
 
 <p>
-  <strong>Individual Price:</strong>
+  <strong>Price:</strong>
   <%= hidden_field_tag(:price, (@product.price / 100.0)) %>
   <%=  number_to_currency(@product.price/100.0) %>
 </p>
-<p>
-  <strong>Available Stock:</strong>
-  <%= @product.stock %>
-</p>
 
+<!-- 
 <strong>Quantity:</strong>
 <%= number_field(:order, :quantity, in: 1..2000, step: 1, value: 1, id: 'qty') %>
 <p>
-  <strong>Total Price:</strong>
-  
+  <strong>Total Price:</strong>  
   <span id="total"><%=  number_to_currency(@product.price/100.0) %><span>
 </p>
+-->
 
 <%= form_tag charges_path do %>
   <article>
@@ -47,16 +44,18 @@
         <p><%= flash[:error] %></p>
       </div>
     <% end %>
-
   </article>
 
   <%= hidden_field_tag(:product_id, @product.id) %>
- 
+  <%= hidden_field_tag(:quantity, 1) %>
+  <br>
+
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          var totalElement = document.getElementById('total')
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-         
+          data-email=<%= current_user.email %>         
           data-description="<%= @product.title %>"
-          data-amount="<%= @product.price %>"
+          data-amount="<%= @product.price%>"
           data-currency="AUD"
           data-locale="auto"></script>
 <% end %>
@@ -66,18 +65,22 @@
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
 
+<!-- 
 
 <script>
   var total = 0
   var totalElement = document.getElementById('total')
   var price = document.getElementById('price')
+  var quantity = document.getElementById('quantity')
   var qty = document.getElementById('qty')
   qty.addEventListener('change', updateTotal)
+
 
   function updateTotal(event) {
     var qtyVal = event.target.value
     total = qtyVal * price.value
     totalElement.innerText = '$' + total
+    quantity.value = qtyVal
   }
-
 </script>
+-->
