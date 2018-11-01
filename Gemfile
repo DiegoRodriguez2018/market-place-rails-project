@@ -66,7 +66,10 @@ gem "aws-sdk-s3", require: false
 gem "devise", "~> 4.5"
 
 gem "dotenv", "~> 2.5", groups: [:development, :test]
-gem 'jquery-rails'
-gem "bootstrap", "~> 4.1"
 
 gem "stripe", "~> 3.29"
+
+#Bootstrap gems
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
+gem 'jquery-rails'
+gem "bootstrap", "~> 4.1"
