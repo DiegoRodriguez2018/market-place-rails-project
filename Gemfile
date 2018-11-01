@@ -65,7 +65,7 @@ gem "aws-sdk-s3", require: false
 
 gem "devise", "~> 4.5"
 
-gem "dotenv", "~> 2.5", groups: [:development, :test]
+gem 'dotenv-rails', groups: [:development, :test]
 
 gem "stripe", "~> 3.29"
 

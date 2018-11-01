@@ -26,8 +26,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-#Ignoring db/img just for development proposes
-/db/img
 
 #Ignoring .env
 .env

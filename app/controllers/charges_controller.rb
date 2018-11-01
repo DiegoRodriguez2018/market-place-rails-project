@@ -16,6 +16,26 @@ class ChargesController < ApplicationController
         :description => @product.title,
         :currency    => 'AUD'
       )
+
+      #Order attributes:
+    # t.bigint "user_id"
+    # t.string "shipping_address"
+    # t.bigint "product_id"
+    # t.string "product_title"
+    # t.string "product_price"
+    # t.string "quantity"
+    # t.datetime "created_at", null: false
+    # t.datetime "updated_at", null: false
+    # t.index ["product_id"], name: "index_orders_on_product_id"
+    # t.index ["user_id"], name: "index_orders_on_user_id"
+    @order = Order.new
+    @order.user = current_user
+    @order.product = @product
+    @order.product_title = @product.title
+    @order.product_price = @product.price
+    #We will set shipping_address and quantity in the product show.html.erb view
+    
+    @order.save
     
     rescue Stripe::CardError => e
       flash[:error] = e.message
