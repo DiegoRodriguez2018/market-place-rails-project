@@ -18,6 +18,7 @@
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+@import "glitch";
 // body {
 // background-image: image-url("background-camo-tiles.png");
 // background-size: 100%;
@@ -28,8 +29,9 @@
 //   }
 // }
 // $body-bg: transparent; 
+
 .buttons {
-    margin-left: 180px;
+    margin-left: 210px;
 }
 .btn-2 {
     -moz-box-shadow:inset 0px 37px 17px -19px #cfcfcf;
@@ -49,12 +51,24 @@
     color:#000000;
     font-family: "Antonio", sans-serif;
     font-size:16px;
+    text-decoration-color: #000000;
     text-transform: uppercase;
     letter-spacing: 0.01em;
     padding:3px 68px;
     // height: 3px;
     text-decoration:none;
     margin-left: 60px;
+    input[type='submit'] {
+        color: #006faa;
+        font-weight: 400;
+        font-size: 1.4em; //font size does not change
+        display: block;
+        padding: 0px 4px 0px 4px; //modification doesn't show..
+        text-decoration: none;
+        &:hover { 
+        color: rgb(229, 246, 255);
+        }
+      }
 }
 .btn-1 {
     -moz-box-shadow:inset 0px 37px 17px -19px #4d4d4d;
@@ -71,6 +85,7 @@
     display:inline-block;
     cursor:pointer;
     color:#ffffff;
+    text-decoration-color: #ffffff;
     font-family: "Antonio", sans-serif;
     font-size:16px;
     text-transform: uppercase;
@@ -78,6 +93,29 @@
     padding:5px 68px;
     text-decoration:none;
     margin-left: 0;
+    input[type='submit'] {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 1em; //font size does not change
+      display: block;
+      border-style: hidden;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      background: transparent;
+    //   padding: 0px 4px 0px 4px; //modification doesn't show..
+    //   text-decoration: none;
+      &:hover { 
+      color: rgb(206, 206, 206);
+      }
+    }
+}
+
+.field {
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-family: "Antonio", sans-serif;
+    letter-spacing: 0.01em;
+    font-weight: bold;
 }
 
 .bg {
@@ -111,83 +149,37 @@
     // padding-top:75.7vh;
     z-index: -9;
 
-.container{
-    margin-top: 320px;
-margin-left: -150px;
-}
-
-
-.sub {
-    font-size: 1.7em;
-    // font-size: 20.8px;
-    font-family: "Antonio", sans-serif;
-    // font-weight: 1;
-    text-align: center;
-    text-transform: uppercase;
-    // margin-left: 20vw;
-    margin-top: -20px;
-    color: $primaryColor;
-}
- 
-.glitch {
-    // position: absolute;
-    // margin: 0 auto;
-    // margin-left: 20vw;
-    // margin-top: 50vh;
-    color: $primaryColor;
-    font-size: 7em;
-    // font-size: 85px;
-    font-family: "Antonio", sans-serif;
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.01em;
-    transform: scale3d(1,1,1);
-    z-index: 1;
-
-    &::before,
-    &::after {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        overflow: hidden;
-        // background: $secondaryColor;
-        color: $primaryColor;
-        clip: rect(0, 900px, 0, 0);
-
-    }
-
-    &::before {
-        left: 7px;
-        text-shadow: 1px 0 green;
-        animation: glitch-effect 3s infinite linear alternate-reverse;
-    }
-
-    &::after {
-        left: 3px;
-        text-shadow: -1px 0 red;
-        animation: glitch-effect 2s infinite linear alternate-reverse;
-    }
-}
-
-@keyframes glitch-effect{
-  
-    @for $i from 0 through $steps{
-        #{percentage($i*(1/$steps))}{
-            clip:rect(random(100)+px,9999px,random(100)+px,0);
+        .container{
+            margin-top: 320px;
+        margin-left: -150px;
         }
-    }
-}
+
+
+        .sub {
+            font-size: 1.7em;
+            // font-size: 20.8px;
+            font-family: "Antonio", sans-serif;
+            // font-weight: 1;
+            text-align: center;
+            text-transform: uppercase;
+            // margin-left: 20vw;
+            margin-top: -20px;
+            color: $primaryColor;
+        }
 }
 
 
 .sign-in-styles {
-    border: 2px solid #000000;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    padding-top: 20px;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 30vh;
+    margin-left: 210px;
     justify-content: center;
+    // box-shadow: -4px 4px 40px #949494;
+
 width: 400px;
 height: 400px;
 }
+

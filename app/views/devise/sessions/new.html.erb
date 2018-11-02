@@ -1,5 +1,6 @@
+<div class="bg">
 <div class="sign-in-styles">
-<h2>Log in</h2>
+<h1 class="glitch-small" data-text="LOG IN">Log in</h1>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -19,10 +20,11 @@
     </div>
   <% end -%>
 
-  <div class="actions">
+  <div class="btn-1">
     <%= f.submit "Log in" %>
   </div>
 <% end %>
-
+<br>
 <%= render "devise/shared/links" %>
+</div>
 </div>
