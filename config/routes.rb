@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   resources :charges
-  resources :orders
-  resources :categories
+  
+  #We decided to ommit resources: for orders and categories so then they are modified in the back end only. 
+  
+  # resources :orders
+  # resources :categories
+  
   devise_for :users
   resources :products
   root 'pages#home'
