@@ -145,7 +145,7 @@ ___________________________________________________
 * We will be building a two sided marketplace that offers a location for users to buy, sell and trade camouflage clothing and items. It will also provide users with information pertaining to all aspects of DPM.
 
 #### 4. Describe the network infrastructure the App may be based on.
-#### 5. Identify nd describe the software to be used in your App.
+#### 5. Identify and describe the software to be used in your App.
 #### 6. Identify the database to be used in your App and provide a justification for your choice.
 #### 7. Identify and describe the production database setup (i.e. postgres instance).
 #### 8. Describe the architecture of your App.
@@ -166,6 +166,6 @@ ___________________________________________________
 #### 23. Research what your legal obligations are in relation to handling user data.
 
 Authors:
-Sam Ludwig
-Diego Rodriguez
 Eathan Langford
+Diego Rodriguez
+Sam Ludwig
