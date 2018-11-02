@@ -12,6 +12,84 @@
  *
  */
 
+ $primaryColor: rgb(0, 0, 0);
+ $secondaryColor: #fff;
+ $steps: 20;
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+// body {
+// background-image: image-url("background-camo-tiles.png");
+// background-size: 100%;
+// }
+// body {
+//   background: {
+//      image: asset_url(/app/assets/images/background-camo-tiles.png");
+//   }
+// }
+// $body-bg: transparent; 
+.home_page_layout {
+    background-image: image-url("background-camo-tiles.png");
+//    background-color: aqua;
+    height: 109%;
+    // width: 100%;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    // margin-top: -180px;
+    overflow: hidden;
+    // padding-top:75.7vh;
+    z-index: -9;
+ 
+.glitch {
+    position: absolute;
+    margin: 0 auto;
+    margin-left: 20vw;
+    margin-top: 50vh;
+    color: $primaryColor;
+    font-size: 80px;
+    font-family: "Antonio", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    transform: scale3d(1,1,1);
+   
+
+    &::before,
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        // background: $secondaryColor;
+        color: $primaryColor;
+        clip: rect(0, 900px, 0, 0);
+
+    }
+
+    &::before {
+        left: 7px;
+        text-shadow: 1px 0 green;
+        animation: glitch-effect 3s infinite linear alternate-reverse;
+    }
+
+    &::after {
+        left: 3px;
+        text-shadow: -1px 0 red;
+        animation: glitch-effect 2s infinite linear alternate-reverse;
+    }
+}
+
+@keyframes glitch-effect{
+  
+    @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+            clip:rect(random(100)+px,9999px,random(100)+px,0);
+        }
+    }
+}
+}

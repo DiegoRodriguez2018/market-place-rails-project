@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+        <%= link_to "Sell", new_product_path, class: "btn-info btn-lg" %>
+      <%= link_to "Buy", products_path, class: "btn-info btn-lg" %>
     <title>MarketplaceProject</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-      <script defer  src="https://checkout.stripe.com/checkout.js"></script>
   </head>
 
-  <body>
-<%# <%= render '/nav' unless current_page?(root_path) %>
-<hr>
+  <body class="home_page_layout">
     <%= yield %>
   </body>
 </html>
