@@ -36,11 +36,10 @@ def get_category_name (str, categories)
     id = result.shift.to_i
     categories[id-1]
 end
-
 entries.each do |entry|
     temp = Product.create(
         title: get_title(entry) ,
-        price: 5000 ,
+        price: rand(500..6000) ,
         description: "10m2 of #{get_title(entry)} camouflage ideal for #{get_category_name(entry,categories)} terrain." ,
         stock: 100,
         user: User.first,

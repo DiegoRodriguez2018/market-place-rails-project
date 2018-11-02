@@ -1,15 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<%= image_tag(@product.image) %>
+<%= image_tag(@product.image, width:400) %>
 
 <p>
    Posted By: <%= @product.user.email %>
 </p>
 
-<p>
-  <strong>Title:</strong>
+<h3>
+  <strong>
   <%= @product.title %>
-</p>
+  Camofluage</strong>
+</h3>
+
+<input type="hidden" id="product-title" value=<%= @product.title %> />
+
 
 <p>
   <strong>Description:</strong>
@@ -21,23 +25,29 @@
   <%= @product.category.name %>
 </p>
 
-
 <p>
   <strong>Price:</strong>
-  <%= hidden_field_tag(:price, (@product.price / 100.0)) %>
+  <%= hidden_field_tag(:price, (@product.price / 100.0), id:"price") %>
   <%=  number_to_currency(@product.price/100.0) %>
 </p>
 
-<!-- 
+<p>
 <strong>Quantity:</strong>
 <%= number_field(:order, :quantity, in: 1..2000, step: 1, value: 1, id: 'qty') %>
+</p>
+
+<p>
+<strong>Shipping Address:</strong>
+  <input type="text" id="shippingUserInput" value="" />
+</p>
+
+
 <p>
   <strong>Total Price:</strong>  
-  <span id="total"><%=  number_to_currency(@product.price/100.0) %><span>
+  $<span id="total"><%=  (@product.price/100.0) %><span>
 </p>
--->
 
-<%= form_tag charges_path do %>
+<%= form_tag charges_path, id:"stripe-form" do %>
   <article>
     <% if flash[:error].present? %>
       <div id="error_explanation">
@@ -47,17 +57,18 @@
   </article>
 
   <%= hidden_field_tag(:product_id, @product.id) %>
-  <%= hidden_field_tag(:quantity, 1) %>
-  <br>
+  <%= hidden_field_tag(:quantity, 1, id: "quantity") %>
+  <%= hidden_field_tag("shipping") %>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          var totalElement = document.getElementById('total')
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-email=<%= current_user.email %>         
-          data-description="<%= @product.title %>"
-          data-amount="<%= @product.price%>"
-          data-currency="AUD"
-          data-locale="auto"></script>
+  <input type="hidden" id="stripeToken" name="stripeToken" />
+  <input type="hidden" id="stripeEmail" name="stripeEmail" />
+  <input type="hidden" id="amountInCents" name="amountInCents" />
+
+  <input type="hidden" id="user-email" value=<%= current_user.email %> />
+
+  <br>
+  <button id="pay"> Pay now </button>
+
 <% end %>
 
 <br>
@@ -65,22 +76,76 @@
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
 
-<!-- 
+
 
 <script>
-  var total = 0
+  var shippingUserInput = document.getElementById('shippingUserInput')
+
+  var shipping = document.getElementById('shipping')
+
+  var userEmail = document.getElementById('user-email')
+
+  var productTitle = document.getElementById('product-title')
+
+
+
   var totalElement = document.getElementById('total')
+  //this comes from rails (@product.price) 
   var price = document.getElementById('price')
+  
+  var total = price.value
+  //hidden_field 
   var quantity = document.getElementById('quantity')
+  //number field
   var qty = document.getElementById('qty')
+  
   qty.addEventListener('change', updateTotal)
 
+  shippingUserInput.addEventListener('change', updateShipping)
+
+  function updateShipping (event){
+    var shippingValue =  event.target.value
+    shipping.value = shippingValue 
+  }
 
   function updateTotal(event) {
     var qtyVal = event.target.value
     total = qtyVal * price.value
-    totalElement.innerText = '$' + total
+    totalElement.innerText = total
     quantity.value = qtyVal
   }
+
+  var handler = StripeCheckout.configure({
+  key: "<%= Rails.configuration.stripe[:publishable_key] %>",
+  token: function(token) {
+    $("#stripeToken").val(token.id);
+    $("#stripeEmail").val(token.email);
+    //inserting price here 
+    $("#amountInCents").val(Math.floor($("#price").val() * 100));
+    $("#stripe-form").submit();
+  }
+});
+
+
+$('#pay').on('click', function(e) {
+  var amountInCents = total*100;
+  var displayAmount = total;
+  // Open Checkout with further options
+
+  handler.open({
+    name: productTitle.value,
+    description: 'Total Amount ($' + displayAmount + ')',
+    amount: amountInCents,
+    email: userEmail.value,     
+    currency:"AUD",
+    locale:"auto"
+  });
+  e.preventDefault();
+});
+
+// Close Checkout on page navigation
+$(window).on('popstate', function() {
+  handler.close();
+});
+
 </script>
--->

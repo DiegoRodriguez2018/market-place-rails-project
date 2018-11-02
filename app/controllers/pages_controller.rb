@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   def home
   end
   def my_orders
+    @orders = Order.where(user:current_user)
   end
   def about
   end
