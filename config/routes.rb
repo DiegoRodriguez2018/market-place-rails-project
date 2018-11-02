@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :charges
   
-  #We decided to ommit resources: for orders and categories so then they are modified in the back end only. 
+  #We decided to ommit "resources:" for orders and categories so then they are modified in the back end only. 
   
   # resources :orders
   # resources :categories
