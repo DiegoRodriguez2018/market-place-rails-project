@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     
   end
   def my_orders
+    @orders = Order.where(user:current_user)
   end
   def about
   end

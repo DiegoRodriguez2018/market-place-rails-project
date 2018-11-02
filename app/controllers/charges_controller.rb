@@ -12,7 +12,7 @@ class ChargesController < ApplicationController
       charge = Stripe::Charge.create(
         :customer    => customer.id,
         #we modified amount and description correspondelly. 
-        :amount      => @product.price,
+        :amount      => @product.price*params[:quantity].to_i,
         :description => @product.title,
         :currency    => 'AUD'
       )
@@ -33,7 +33,8 @@ class ChargesController < ApplicationController
     @order.product = @product
     @order.product_title = @product.title
     @order.product_price = @product.price
-    #We will set shipping_address and quantity in the product show.html.erb view
+    @order.shipping_address = params[:shipping]
+    @order.quantity = params[:quantity].to_i
     
     @order.save
     
