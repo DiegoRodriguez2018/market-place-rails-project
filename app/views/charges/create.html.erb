@@ -1,1 +1,24 @@
-<h2>Congratulations <%= current_user.email %>, you have purchased  <strong><%= @product.title %></strong> for only <strong> <%= number_to_currency(@product.price/100.0) %> </strong>!!</h2>
+<h2>
+Thank You! Your payment has been processed successfully. 
+</h2>
+
+<%= image_tag(@product.image, width:400) %>
+
+<br>
+<br>
+
+<h3>You have purchased <%= params[:quantity] %> unit
+
+<% if params[:quantity].to_i > 1 %>
+    s
+<% end %>
+
+ of <strong><%= @product.title %> Camouflage</strong> (10m2/unit) 
+ 
+ for a total price of $<strong> <%= number_to_currency(@product.price*params[:quantity].to_i/100.0) %> </strong>.
+</h3>
+
+<br>
+<h3>
+Your order will be delivered to: <strong> <%= params[:shipping] %> </strong>
+</h3>
