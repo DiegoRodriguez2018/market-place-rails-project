@@ -28,7 +28,7 @@
 //      image: asset_url(/app/assets/images/background-camo-tiles.png");
 //   }
 // }
-// $body-bg: transparent; 
+// $body-bg: transparent;
 
 .buttons {
     margin-left: 210px;
@@ -65,7 +65,7 @@
         display: block;
         padding: 0px 4px 0px 4px; //modification doesn't show..
         text-decoration: none;
-        &:hover { 
+        &:hover {
         color: rgb(229, 246, 255);
         }
       }
@@ -104,7 +104,7 @@
       background: transparent;
     //   padding: 0px 4px 0px 4px; //modification doesn't show..
     //   text-decoration: none;
-      &:hover { 
+      &:hover {
       color: rgb(206, 206, 206);
       }
     }
@@ -121,10 +121,10 @@
 .bg {
     /* The image used */
     background-image: image-url("background-camo-tiles.png");
-  
+
     /* Full height */
     height: 100vh;
-  
+
     /* Center and scale the image nicely */
     position:absolute;
     background-position: center;
@@ -183,3 +183,42 @@ width: 400px;
 height: 400px;
 }
 
+.nav-btn {
+    -moz-box-shadow:inset 0px 37px 17px -19px #4d4d4d;
+    -webkit-box-shadow:inset 0px 37px 17px -19px #4d4d4d;
+    box-shadow:inset 0px 37px 17px -19px #4d4d4d;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #000000), color-stop(1, #000000));
+    background:-moz-linear-gradient(top, #000000 5%, #000000 100%);
+    background:-webkit-linear-gradient(top, #000000 5%, #000000 100%);
+    background:-o-linear-gradient(top, #000000 5%, #000000 100%);
+    background:-ms-linear-gradient(top, #000000 5%, #000000 100%);
+    background:linear-gradient(to bottom, #000000 5%, #000000 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000',GradientType=0);
+    background-color:#000000;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    text-decoration-color: #ffffff;
+    font-family: "Antonio", sans-serif;
+    font-size:13px;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    padding:0px 10px;
+    text-decoration:none;
+    margin-left: 0;
+    input[type='submit'] {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 1em; //font size does not change
+      display: block;
+      border-style: hidden;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      background: transparent;
+    //   padding: 0px 4px 0px 4px; //modification doesn't show..
+    //   text-decoration: none;
+      &:hover {
+      color: rgb(206, 206, 206);
+      }
+    }
+  }

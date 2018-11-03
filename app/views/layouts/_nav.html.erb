@@ -1,15 +1,18 @@
+<h1 class="glitch-small" data-text="DISRUPT.">DISRUPT.</h1>
     <nav>
       <% if user_signed_in? %>
-        <p> Welcome, <%= current_user.email %>  | 
-        <%= link_to('Logout', destroy_user_session_path, method: :delete) %> 
+        <p> Welcome, <%= current_user.email %>  |
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
         </p>
         <hr>
       <% end %>
-      <%= link_to "Home", root_path , class: "btn-info btn-lg" %> 
-      <%= link_to "Sell", new_product_path, class: "btn-info btn-lg" %>
-      <%= link_to "Buy", products_path, class: "btn-info btn-lg" %>
-      <%= link_to "My Orders", my_orders_path, class: "btn-info btn-lg" %>      
-      <%= link_to "About", about_path, class: "btn-info btn-lg" %>
-      <%= link_to "Contact", contact_path, class: "btn-info btn-lg" %>
+      <%= link_to "Home", root_path , class: "nav-btn" %>
+      <%= link_to "Sell", new_product_path, class: "nav-btn" %>
+      <%= link_to "Buy", products_path, class: "nav-btn" %>
+      <%= link_to "My Orders", my_orders_path, class: "nav-btn" %>
+      <%= link_to "About", about_path, class: "nav-btn" %>
+      <%= link_to "Contact", contact_path, class: "nav-btn" %>
+
+
 
     </nav>
