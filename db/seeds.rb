@@ -11,7 +11,11 @@ Category.delete_all
 Product.delete_all
 Order.delete_all
 
-User.create(email:"userone@gmail.com", password:"123456")
+User.create(email:"user1@gmail.com", password:"123456")
+User.create(email:"user2@gmail.com", password:"123456")
+User.create(email:"user3@gmail.com", password:"123456")
+
+
 
 categories = ["Snow","Woodland and Jungle", "Dessert and Beach", "Urban"]
 
@@ -42,7 +46,7 @@ entries.each do |entry|
         price: rand(500..6000) ,
         description: "10m2 of #{get_title(entry)} camouflage ideal for #{get_category_name(entry,categories)} terrain." ,
         stock: 100,
-        user: User.first,
+        user: User.find(rand(1..3)),
         category: Category.find(get_category_id(entry))
     )
     file = Rails.root.join('db','img',entry) 
