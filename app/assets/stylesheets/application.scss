@@ -152,6 +152,29 @@
       z-index: -9;
     }
 
+    .bg3 {
+        /* The image used */
+        background-image: image-url("bg3.png");
+
+        /* Full height */
+        height: 100vh;
+
+        /* Center and scale the image nicely */
+        position:absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        // margin-top: -220px;
+        width: 100vw;
+        z-index: -9;
+      }
+
+    .text {
+      text-align: left;
+      color: #d87e08;
+    }
+
+
 .home_page_layout {
     // background-image: image-url("background-camo-tiles.png");
 //    background-color: aqua;
