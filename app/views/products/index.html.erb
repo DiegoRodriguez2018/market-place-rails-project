@@ -1,31 +1,35 @@
+
 <%= render "layouts/nav" %>
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<body class="products_page">
+  <div id="wrapper">
+      <div id="content">
 
-<table>
+        <div class="list">
+          <div class="container">
+              <% @categories.each do | category| %>
+        <h1><%= category.name %></h1>
+                <% category.products.each do |product| %>
+          <div class="product-card">     
+            <span class="tag">
+              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+            </span>
+            <h2><%=link_to product.title , product_path(product)%></h2>
+            <h4><%= category.name %></h4>
+            <figure>
+            <%=image_tag(product.image, height: '40px', width: '40px')%>
+            </figure>
+            
+            <span class="price">
+              <%= number_to_currency(product.price/100.0) %>
+            </span>
+            
+<% end %>
+          </div>
+<% end %>
+        </div>
 
-  <tbody>
-
-  <% @categories.each do | category| %>
-          <h3><%= category.name %></h3>
-          <br>
-          <% category.products.each do |product| %>
-          
-            <%= link_to image_tag(product.image, width: '100'), product_path(product) %> 
-          <br>
-          <%=link_to product.title , product_path(product)%>
-          <br>
-          Price: <%= number_to_currency(product.price/100.0) %>
-          <br>
-          <br>
-        <% end %>
-      <hr>
-    <% end %>
-
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
+      </div>
+      </div>
+  </div>

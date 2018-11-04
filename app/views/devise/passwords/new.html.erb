@@ -1,4 +1,9 @@
-<h2>Forgot your password?</h2>
+<div class="bg">
+<%= render "layouts/forms_nav" %>
+<div class="sign-in-styles">
+<h1 class="glitch-small" data-text="FORGOT?">Forgot?</h1>
+<div class="subtext">Forgot your password?</div>
+</br>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
@@ -8,9 +13,11 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+  <div class="btn-1">
+    <%= f.submit "Send" %>
   </div>
 <% end %>
-
+<br/>
 <%= render "devise/shared/links" %>
+</div>
+</div>
