@@ -1,31 +1,27 @@
 <%= render "layouts/nav" %>
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
-
-<table>
-
-  <tbody>
-
-  <% @categories.each do | category| %>
-          <h3><%= category.name %></h3>
-          <br>
-          <% category.products.each do |product| %>
-          
-            <%= link_to image_tag(product.image, width: '100'), product_path(product) %> 
-          <br>
-          <%=link_to product.title , product_path(product)%>
-          <br>
-          Price: <%= number_to_currency(product.price/100.0) %>
-          <br>
-          <br>
-        <% end %>
-      <hr>
-    <% end %>
-
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
+<div class="container">
+    <div id="products" class="row list-group">
+    <% @categories.each do | category| %>
+        <div class="item  col-xs-4 col-lg-4">
+        <% category.products.each do |product| %>
+            <div class="thumbnail">
+                <div class="group list-group-image"><%=image_tag(product.image, width: '380px')%></div>
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        <%=link_to product.title , product_path(product)%></h4>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                               <%= number_to_currency(product.price/100.0) %></p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                      <% end %>
+            </div>
+                  <% end %>
+        </div>
