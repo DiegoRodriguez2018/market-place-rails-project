@@ -42,7 +42,7 @@
 }
 
 @keyframes glitch-effect{
-  
+
     @for $i from 0 through $steps{
         #{percentage($i*(1/$steps))}{
             clip:rect(random(100)+px,9999px,random(100)+px,0);
@@ -60,11 +60,12 @@
     // font-size: 85px;
     font-family: "Antonio", sans-serif;
     font-weight: 600;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     letter-spacing: 0.01em;
     transform: scale3d(1,1,1);
     z-index: 1;
+
 
     &::before,
     &::after {
@@ -77,6 +78,7 @@
         // background: $secondaryColor;
         color: $primaryColor;
         clip: rect(0, 900px, 0, 0);
+
 
     }
 
@@ -94,7 +96,7 @@
 }
 
 @keyframes glitch-effect{
-  
+
     @for $i from 0 through $steps{
         #{percentage($i*(1/$steps))}{
             clip:rect(random(100)+px,9999px,random(100)+px,0);

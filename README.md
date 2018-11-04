@@ -152,6 +152,9 @@ ___________________________________________________
 #### 9. Explain the different high-level components (abstractions) in your App.
 #### 10. Detail any third party services that your App will use.
 #### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay,   Airbnb).
+
+* Gumtree is an example. Really any marketplace that allows a user to both and buy and sell items provides a similar experience.
+
 #### 12. Discuss the database relations to be implemented.
 #### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
 #### 14. Provide your database schema design.
