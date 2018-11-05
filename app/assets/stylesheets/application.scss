@@ -169,6 +169,23 @@
         z-index: -9;
       }
 
+      .bg4 {
+          /* The image used */
+          background-image: image-url("bg4.png");
+
+          /* Full height */
+          height: 100vh;
+
+          /* Center and scale the image nicely */
+          position:absolute;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          // margin-top: -220px;
+          width: 100vw;
+          z-index: -9;
+        }
+
     .text {
       text-align: left;
       color: #d87e08;
