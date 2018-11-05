@@ -106,31 +106,55 @@ Now you should be able to go to your heroku app website  and see the live versio
 Tip: You can open your heroku app website from terminal by typing: `heroku open` 
 
 
-
-
-
-
-
 ---
 ### Design Documentation
-```
-Design process
-Wireframes
-```
----
 
-### User Stories and Workflow diagram:
-* This is the UserStories and Workflow digram we created in figma.
+#### Design process
+
+<EATHAN TO COMPLETE>
+
+---
+#### User Stories:
+
+<SAM TO COMPLETE>
+
+#### Workflow Diagram of the User Journey/s:
+We used figma to create a User Stories / Workflow Diagram of the project.
 ![img](docs/stories.png)
 ![img](docs/stories1.png)
 
 ---
+#### Wireframes
+### Inspiration:
+![Image](docs/inspiration.png) 
+### Colour Inspiration:
+![Image](docs/colour-inspiration.png) 
+### Logo Inspiration:
+![Image](docs/logo-inspiration.png) 
+### Basic Wireframes:
+#### Desktop:
+![Image](docs/desktop1.png)
+![Image](docs/desktop2.png) 
+#### Mobile:
+![Image](docs/mobile-wireframes.png) 
+### Splash Page Wireframes:
+#### Desktop:
+![Image](docs/splash-desktop.png)
+#### Mobile:
+![Image](docs/splash-mobile.png) 
+### Index Page Wireframes:
+![Image](docs/products-page.png)
+### Show Page Wireframes:
+![Image](docs/show-page.png)
 
-### Database Design:
-* ERD: After discussing about our database structure we agreed to the following database structure:
+---
+#### Database Entity Relationship Diagram (ERD)
+After discussing about our database structure we agreed to start our project with this database entity relationship diagram:
 
 ![img](docs/database-design.png)
-* Infrastructure: As our Heroku app server is based in the US, we decided to base our AWS server in the US as well (us-east-1). As the servers are going to be located close to each other we hope the performance of our web app to be improved.
+
+#### Database Infastructure
+As our Heroku app server is based in the US, we decided to base our AWS server in the US as well (us-east-1). As the servers are going to be located close to each other we hope the performance of our web app to be improved.
 
 ---
 ### Details of planning process:
