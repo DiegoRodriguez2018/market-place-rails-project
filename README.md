@@ -104,15 +104,15 @@ Wireframes
 
 ### User Stories and Workflow diagram:
 * This is the UserStories and Workflow digram we created in figma.
-![img](readme-images/stories.png)
-![img](readme-images/stories1.png)
+![img](docs/stories.png)
+![img](docs/stories1.png)
 
 ---
 
 ### Database Design:
 * ERD: After discussing about our database structure we agreed to the following database structure:
 
-![img](readme-images/database-design.png)
+![img](docs/database-design.png)
 * Infrastructure: As our Heroku app server is based in the US, we decided to base our AWS server in the US as well (us-east-1). As the servers are going to be located close to each other we hope the performance of our web app to be improved.
 
 ---
@@ -123,12 +123,13 @@ Project plan & timeline
 Screenshots of Trello board(s)
 ```
 
-![Image](readme-images/githubprojects1.png) GitHub Projects Board 1
-![Image](readme-images/githubprojects2.png) Github Projects Board 2
-![Image](readme-images/githubprojects3.png) Github Projects Board 3
-![Image](readme-images/githubprojects4.png) Github Projects Board 4
-![Image](readme-images/githubprojects5.png) Github Projects Board 5
-![Image](readme-images/githubprojects6.png) Github Projects Board 6
+![Image](docs/githubprojects1.png) GitHub Projects Board #1
+![Image](docs/githubprojects2.png) Github Projects Board #2
+![Image](docs/githubprojects3.png) Github Projects Board #3
+![Image](docs/githubprojects4.png) Github Projects Board #4
+![Image](docs/githubprojects5.png) Github Projects Board #5
+![Image](docs/githubprojects6.png) Github Projects Board #6
+![Image](docs/githubprojects7.png) Github Projects Board #7
 
 ---
 # FAQ
@@ -179,7 +180,7 @@ products has many users ....
 ### 14. Provide your database schema design.
 
 #### Database Structure:
-![img](readme-images/database-design.png)
+![img](docs/database-design.png)
 
 #### Activer Record Schema:
 ```ruby
@@ -269,26 +270,26 @@ end
 ### 15. Provide User stories for your App.
 ### 16. Provide Wireframes for your App.
 ### Inspiration:
-![Image](readme-images/inspiration.png) 
+![Image](docs/inspiration.png) 
 ### Colour Inspiration:
-![Image](readme-images/colour-inspiration.png) 
+![Image](docs/colour-inspiration.png) 
 ### Logo Inspiration:
-![Image](readme-images/logo-inspiration.png) 
+![Image](docs/logo-inspiration.png) 
 ### Basic Wireframes:
 #### Desktop:
-![Image](readme-images/desktop1.png)
-![Image](readme-images/desktop2.png) 
+![Image](docs/desktop1.png)
+![Image](docs/desktop2.png) 
 #### Mobile:
-![Image](readme-images/mobile-wireframes.png) 
+![Image](docs/mobile-wireframes.png) 
 ### Splash Page Wireframes:
 #### Desktop:
-![Image](readme-images/splash-desktop.png)
+![Image](docs/splash-desktop.png)
 #### Mobile:
-![Image](readme-images/splash-mobile.png) 
+![Image](docs/splash-mobile.png) 
 ### Index Page Wireframes:
-![Image](readme-images/products-page.png)
+![Image](docs/products-page.png)
 ### Show Page Wireframes:
-![Image](readme-images/show-page.png)
+![Image](docs/show-page.png)
 
 
 ### 17. Describe the way tasks are allocated and tracked in your project.
