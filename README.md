@@ -123,12 +123,13 @@ Project plan & timeline
 Screenshots of Trello board(s)
 ```
 
-![Image](readme-images/githubprojects1.png) GitHub Projects Board 1
-![Image](readme-images/githubprojects2.png) Github Projects Board 2
-![Image](readme-images/githubprojects3.png) Github Projects Board 3
-![Image](readme-images/githubprojects4.png) Github Projects Board 4
-![Image](readme-images/githubprojects5.png) Github Projects Board 5
-![Image](readme-images/githubprojects6.png) Github Projects Board 6
+![Image](readme-images/githubprojects1.png) GitHub Projects Board #1
+![Image](readme-images/githubprojects2.png) Github Projects Board #2
+![Image](readme-images/githubprojects3.png) Github Projects Board #3
+![Image](readme-images/githubprojects4.png) Github Projects Board #4
+![Image](readme-images/githubprojects5.png) Github Projects Board #5
+![Image](readme-images/githubprojects6.png) Github Projects Board #6
+![Image](readme-images/githubprojects7.png) Github Projects Board #7
 
 ---
 # FAQ
