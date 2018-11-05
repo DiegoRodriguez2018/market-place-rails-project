@@ -49,12 +49,12 @@ The tech stack applied in this project include:
 ###  Setup & Configuration Instructions
 Instructions on how to setup, configure and use your App.
 Users:
-1. Head to https://camo-market.herokuapp.com 
+1. Head to https://camo-market.herokuapp.com
 2. Sign up for a free account, you will need your email and a safe password.
 3. You will be presented with a few options:
-    1. Sell, will allow you to list your item and upload an image of it. It also will dislpay all the items you have listed in the past. 
-    2. Buy, will display a variety of items for sale in the platform. 
-    3. My Orders, will show all the previous orders that you have requested. 
+    1. Sell, will allow you to list your item and upload an image of it. It also will dislpay all the items you have listed in the past.
+    2. Buy, will display a variety of items for sale in the platform.
+    3. My Orders, will show all the previous orders that you have requested.
     4. About, will display a short description of our platform propose and vision.
     5. Contact, will display means to get in contact with the support team.
 
@@ -62,11 +62,11 @@ Developers:
 Recommended software requirements for developers:  
     1. Ruby 2.4.1
     2. Ruby on Rails 5.2.1
-    3. Postgresql 
+    3. Postgresql
 
 Developers also will need an active account for the following services:
     1. Stripe
-    2. Amazon Web Services (AWS)  and Heroku if planning to deploy. 
+    2. Amazon Web Services (AWS)  and Heroku if planning to deploy.
 
 ---
 #### Running locally
@@ -78,7 +78,7 @@ To run locally you will need to do the following steps:
 PUBLISHABLE_KEY =<your publishable key>
 SECRET_KEY =<your secret key>
 ```
-IMPORTANT: Remember to add .env to your .gitignore so you dont make your keys public. 
+IMPORTANT: Remember to add .env to your .gitignore so you dont make your keys public.
 
 
 
@@ -86,24 +86,24 @@ IMPORTANT: Remember to add .env to your .gitignore so you dont make your keys pu
   1. `rails db:create`
   2. `rails db:migrate`
   3. `rails db:seed` (in case you want to include some sample data)
-5. Run `rails server` 
+5. Run `rails server`
 
 Now you should be able to see a running version of the website when opening localhost:3000/ in your browser.
 
 ---
 #### Deploying
 To deploy in heroku you will need to do the following:
-1. Create Heroku and AWS (S3) accounts. 
-2. In the AWS dashboard create a new bucket to store the website Active Record images. 
-3. In Heroku dashboard create a new app and set up all your keys under settings>config vars. Here you need to set up your AWS and Stripe keys. 
+1. Create Heroku and AWS (S3) accounts.
+2. In the AWS dashboard create a new bucket to store the website Active Record images.
+3. In Heroku dashboard create a new app and set up all your keys under settings>config vars. Here you need to set up your AWS and Stripe keys.
 4. Copy your git repository to heroku by typing: `git push heroku master`
 5. Set up your database by running:
   1. `heroku run rake db:migrate`
   2. `heroku run rake db:seed` (optional, just in case you want some sample data in your database)
 
-Now you should be able to go to your heroku app website  and see the live version of the webapp. 
+Now you should be able to go to your heroku app website  and see the live version of the webapp.
 
-Tip: You can open your heroku app website from terminal by typing: `heroku open` 
+Tip: You can open your heroku app website from terminal by typing: `heroku open`
 
 
 ---
@@ -139,7 +139,7 @@ Tip: You can open your heroku app website from terminal by typing: `heroku open`
 * As a Seller, I want to message other users, so I can enquire about items and respond to enquiries.
 * As a Seller, I want to view listed items, so that I can choose whether or not to make a purchase.
 * As a Seller, I want to search listings, so that I can find something specific within listed items.
-* As a Seller, I want to find information about camouflage patterns, so I what it is and can beused for.
+* As a Seller, I want to find information about camouflage patterns, so I know what it is and can be used for.
 * As a Seller, I want a user account page, so I can update my account information.
 * As a Seller, I want to edit or delete my existing listings, so that I can change the description or remove the listing.
 * As a Seller, I want to add images to the item I’m listing. , so that users can see a visual representation of the item listed.
@@ -157,22 +157,22 @@ We used figma to create a User Stories / Workflow Diagram of the project.
 ---
 #### Wireframes
 ### Inspiration:
-![Image](docs/inspiration.png) 
+![Image](docs/inspiration.png)
 ### Colour Inspiration:
-![Image](docs/colour-inspiration.png) 
+![Image](docs/colour-inspiration.png)
 ### Logo Inspiration:
-![Image](docs/logo-inspiration.png) 
+![Image](docs/logo-inspiration.png)
 ### Basic Wireframes:
 #### Desktop:
 ![Image](docs/desktop1.png)
-![Image](docs/desktop2.png) 
+![Image](docs/desktop2.png)
 #### Mobile:
-![Image](docs/mobile-wireframes.png) 
+![Image](docs/mobile-wireframes.png)
 ### Splash Page Wireframes:
 #### Desktop:
 ![Image](docs/splash-desktop.png)
 #### Mobile:
-![Image](docs/splash-mobile.png) 
+![Image](docs/splash-mobile.png)
 ### Index Page Wireframes:
 ![Image](docs/products-page.png)
 ### Show Page Wireframes:
@@ -253,7 +253,7 @@ heroku, devise, stripe, aws
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
 db design structure
 
-(Here I would talk about how postgres is different to sqlite, justify how postgres is way more powerful and how it fits really nicely into rails. 
+(Here I would talk about how postgres is different to sqlite, justify how postgres is way more powerful and how it fits really nicely into rails.
 )
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
@@ -265,7 +265,7 @@ postgres database with this talbes: (show schema, or postgress output)
 ### 8. Describe the architecture of your App.
 
 
-(Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew? 
+(Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
 
 Yes go into detail about MVC, don’t describe any model associations yet
 )
@@ -276,23 +276,23 @@ also about how active record is an abstraction of sql)
 
 
 ### 10. Detail any third party services that your App will use.
-devise, stripe, pundit, heroku, aws
+Devise, Stripe, Pundit, Heroku, AWS
 
 ### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay,   Airbnb).
-user, product, message, converstion, order, orderToProduct, Shopping cart, 
+User, Product, Message, Conversation, Order, OrderToProduct, Shopping cart,
 
 ### 12. Discuss the database relations to be implemented.
-user many to many  products
-orders one to many products
+User many to many  products
+Orders one to many products
 
 (This is more regarding why we need a join table in certain instances in your app, why we need a foreign keys in different tables, think about the stuff we did when we first started sql
 )
 
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
-user has many products
-products has many users ....
+User has many products
+Products has many users ....
 
-(Think about rails active record associations, has_many, has_one, belongs_to 
+(Think about rails active record associations, has_many, has_one, belongs_to
 )
 
 ### 14. Provide your database schema design.
@@ -386,25 +386,26 @@ end
 
 
 ### 15. Provide User stories for your App.
+* Refer to UserStories in README
 
 ### 16. Provide Wireframes for your App.
 ### Inspiration:
-![Image](docs/inspiration.png) 
+![Image](docs/inspiration.png)
 ### Colour Inspiration:
-![Image](docs/colour-inspiration.png) 
+![Image](docs/colour-inspiration.png)
 ### Logo Inspiration:
-![Image](docs/logo-inspiration.png) 
+![Image](docs/logo-inspiration.png)
 ### Basic Wireframes:
 #### Desktop:
 ![Image](docs/desktop1.png)
-![Image](docs/desktop2.png) 
+![Image](docs/desktop2.png)
 #### Mobile:
-![Image](docs/mobile-wireframes.png) 
+![Image](docs/mobile-wireframes.png)
 ### Splash Page Wireframes:
 #### Desktop:
 ![Image](docs/splash-desktop.png)
 #### Mobile:
-![Image](docs/splash-mobile.png) 
+![Image](docs/splash-mobile.png)
 ### Index Page Wireframes:
 ![Image](docs/products-page.png)
 ### Show Page Wireframes:
