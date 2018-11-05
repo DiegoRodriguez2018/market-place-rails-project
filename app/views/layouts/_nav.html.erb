@@ -3,7 +3,7 @@
       <% if user_signed_in? %>
         <p
 
-        class="text" data-text="Welcome">Welcome, <%= current_user.email %>  |
+        class="text" data-text="Welcome">Logged in as <%= current_user.email %>  |
         <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
         </p>
         <hr>
