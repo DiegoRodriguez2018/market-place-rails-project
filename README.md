@@ -253,12 +253,27 @@ heroku, devise, stripe, aws
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
 db design structure
 
+(Here I would talk about how postgres is different to sqlite, justify how postgres is way more powerful and how it fits really nicely into rails. 
+)
+
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
 postgres database with this talbes: (show schema, or postgress output)
 
+(Here I would talk about the specifics of postgres, how it connects to your models, how it sits in overall MVC
+)
+
 ### 8. Describe the architecture of your App.
 
+
+(Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew? 
+
+Yes go into detail about MVC, don’t describe any model associations yet
+)
+
 ### 9. Explain the different high-level components (abstractions) in your App.
+(you could talk how ruby gems are an abstraction from your own ruby code
+also about how active record is an abstraction of sql)
+
 
 ### 10. Detail any third party services that your App will use.
 devise, stripe, pundit, heroku, aws
@@ -270,11 +285,15 @@ user, product, message, converstion, order, orderToProduct, Shopping cart,
 user many to many  products
 orders one to many products
 
+(This is more regarding why we need a join table in certain instances in your app, why we need a foreign keys in different tables, think about the stuff we did when we first started sql
+)
 
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
 user has many products
 products has many users ....
 
+(Think about rails active record associations, has_many, has_one, belongs_to 
+)
 
 ### 14. Provide your database schema design.
 
@@ -367,6 +386,7 @@ end
 
 
 ### 15. Provide User stories for your App.
+
 ### 16. Provide Wireframes for your App.
 ### Inspiration:
 ![Image](docs/inspiration.png) 
@@ -395,6 +415,13 @@ end
 ### 18. Discuss how Agile methodology is being implemented in your project.
 ### 19. Provide an overview and description of your Source control process.
 ### 20. Provide an overview and description of your Testing process.
+(As Scott just mentioned on slack feedback from another student would suffice.
+)
 ### 21. Discuss and analyse requirements related to information system security.
+(Make this a more general analysis of the ethics behind handling user data.
+)
 ### 22. Discuss methods you will use to protect information and data.
+(Encryption - hashing passwords automatically.
+Stripe - what manages and protects all credit card information
+Pundit - controls authorisations and what users can see.)
 ### 23. Research what your legal obligations are in relation to handling user data.
