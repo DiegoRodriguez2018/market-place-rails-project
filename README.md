@@ -114,9 +114,40 @@ Tip: You can open your heroku app website from terminal by typing: `heroku open`
 <EATHAN TO COMPLETE>
 
 ---
-#### User Stories:
+### User Stories:
+#### Buyer User Stories:
+* As a Buyer, I want to create an account, so that I can buy and browse on the website.
+* As a Buyer, I want to create an account, so that I can buy, sell and browse on the website.
+* As a Buyer, I want to pay with credit card, so I can complete a purchase.
+* As a Buyer, I want to message other users, so I can enquire about items and respond to enquiries.
+* As a Buyer, I want to search listings, so that I can find something specific within listed items.
+* As a Buyer, I want to edit or delete my existing listings, so that I can change the description or remove the listing.
+* As a Buyer, I want to add images to the item I’m listing, so that users can see a visual representation of the item listed.
+* As a Buyer, I want to add a description of the item I’m listing, so that users can view a description of the item listed.
+* As a Buyer, I want to list items for sale, so that users can see and purchase my items.
+* As a Buyer, I want to view listed items, so that I can choose whether or not to make a purchase.
+* As a Buyer, I want to create an account, so that I can buy and sell on the website.
+* As a Buyer, I want to receive an e-mail receipt, so that I can see the purchasing details.
+* As a Buyer, I want to see information about camouflage patterns, so I can find the right style for me.
+* As a Buyer, I want a user account page, so I can update my account information.
+* As a Buyer, I want to search for camouflage for types relating to specific environments and countries, so that I can find a suitable camouflage for my needs.
+* As a Buyer, I want to see what items I currently have listed for sale, so I can keep track ofwhat I’m selling.
+* As a Seller, I want to list items for sale, so that users can see and purchase my items.
 
-<SAM TO COMPLETE>
+#### Seller User Stories:
+* As a Seller, I want to create an account, so that I can sell, manage my items, and browse on the website.
+* As a Seller, I want to message other users, so I can enquire about items and respond to enquiries.
+* As a Seller, I want to view listed items, so that I can choose whether or not to make a purchase.
+* As a Seller, I want to search listings, so that I can find something specific within listed items.
+* As a Seller, I want to find information about camouflage patterns, so I what it is and can beused for.
+* As a Seller, I want a user account page, so I can update my account information.
+* As a Seller, I want to edit or delete my existing listings, so that I can change the description or remove the listing.
+* As a Seller, I want to add images to the item I’m listing. , so that users can see a visual representation of the item listed.
+* As a Seller, I want to add a description of the item I’m listing, so that users can view a description of the item listed.
+* As a Seller, I want to see what items I currently have listed for sale, so I can keep track of what I’m selling.
+* As a Seller, I want to pay with my credit card, so that I can complete a purchase.
+* As a Seller, I want to search for camouflage for types relating to specific environments and countries, so that I can find a suitable camouflage for my needs.
+* As a Seller, I want to receive an e-mail receipt after purchase has been completed, so that I can see the purchasing details.
 
 #### Workflow Diagram of the User Journey/s:
 We used figma to create a User Stories / Workflow Diagram of the project.
