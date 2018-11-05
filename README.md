@@ -107,6 +107,10 @@ Wireframes
 
 ![img](readme-images/stories.png)
 
+![img](readme-images/stories1.png)
+
+![img](readme-images/stories2.png)
+
 ---
 
 ### Database Design:
@@ -147,16 +151,38 @@ Screenshots of Trello board(s)
 * We will be building a two sided marketplace that offers a location for users to buy, sell and trade camouflage clothing and items. It will also provide users with information pertaining to all aspects of DPM.
 
 ### 4. Describe the network infrastructure the App may be based on.
+heroku, devise, stripe, aws
 ### 5. Identify and describe the software to be used in your App.
+
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
+db design structure
+
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
+postgres database with this talbes: (show schema, or postgress output)
+
 ### 8. Describe the architecture of your App.
+
 ### 9. Explain the different high-level components (abstractions) in your App.
+
 ### 10. Detail any third party services that your App will use.
+devise, stripe, pundit, heroku, aws
+
 ### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay,   Airbnb).
+user, product, message, converstion, order, orderToProduct, Shopping cart, 
+
 ### 12. Discuss the database relations to be implemented.
+user many to many  products
+orders one to many products
+
+
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
+user has many products
+products has many users ....
+
+
 ### 14. Provide your database schema design.
+dbdesign database.
+
 ### 15. Provide User stories for your App.
 ### 16. Provide Wireframes for your App.
 ### Inspiration:
