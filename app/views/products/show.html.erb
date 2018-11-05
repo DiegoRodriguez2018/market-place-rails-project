@@ -1,3 +1,6 @@
+<div class="bg5">
+
+</div>
 <p id="notice"><%= notice %></p>
 
 <%= image_tag(@product.image, width:400) %>
@@ -44,7 +47,7 @@
 
 
 <p>
-  <strong>Total Price:</strong>  
+  <strong>Total Price:</strong>
   $<span id="total"><%=  (@product.price/100.0) %><span>
 </p>
 
@@ -88,22 +91,22 @@
 
 
   var totalElement = document.getElementById('total')
-  //this comes from rails (@product.price) 
+  //this comes from rails (@product.price)
   var price = document.getElementById('price')
-  
+
   var total = price.value
-  //hidden_field 
+  //hidden_field
   var quantity = document.getElementById('quantity')
   //number field
   var qty = document.getElementById('qty')
-  
+
   qty.addEventListener('change', updateTotal)
 
   shippingUserInput.addEventListener('change', updateShipping)
 
   function updateShipping (event){
     var shippingValue =  event.target.value
-    shipping.value = shippingValue 
+    shipping.value = shippingValue
   }
 
   function updateTotal(event) {
@@ -118,7 +121,7 @@
   token: function(token) {
     $("#stripeToken").val(token.id);
     $("#stripeEmail").val(token.email);
-    //inserting price here 
+    //inserting price here
     $("#amountInCents").val(Math.floor($("#price").val() * 100));
     $("#stripe-form").submit();
   }
@@ -134,7 +137,7 @@ $('#pay').on('click', function(e) {
     name: productTitle.value,
     description: 'Total Amount ($' + displayAmount + ')',
     amount: amountInCents,
-    email: userEmail.value,     
+    email: userEmail.value,
     currency:"AUD",
     locale:"auto"
   });

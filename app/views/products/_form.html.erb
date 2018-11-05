@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="text">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
+  <div class="text">
     <%= form.label :price %>
     <%= form.text_field :price, value: number_with_precision((product.price||0)/100.0, :precision => 2) %>
   </div>
 
-  <div class="field">
+  <div class="text">
     <%= form.label :description %>
     <%= form.text_area :description %>
   </div>
 
-  <div class="field">
+  <div class="text">
     <%= form.label :stock %>
     <%= form.number_field :stock %>
   </div>
 
-  <div class="field">
+  <div class="text">
     <%= form.label :category %>
     <%= select_tag(:category, options_for_select(@select_options,@select_options.length)) %>
   </div>
 
-  <div class="field">
+  <div class="text">
     <%= form.label :image %>
     <%= form.file_field :image %>
   </div>
