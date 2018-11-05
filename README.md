@@ -1,74 +1,32 @@
 # README
-
----
-## Project Description
-
-
-
-
 This project is a combined effort of:
 * [Diego Rodriguez](https://github.com/DiegoRodriguez2018)
 * [Eathan Langford](https://github.com/EathanLangford)
 * [Sam Ludwig](https://github.com/Ludwixix)
 
 #### Website URL
-https://camo-market.herokuapp.com/users/sign_in
+https://camo-market.herokuapp.com
 
 #### Github Repository
 https://github.com/DiegoRodriguez2018/market-place-rails-project
 
 ---
-###  Problems Encountered
+## Project Description
 
-* Local image seeding: One of the first problems we encountered is how to locally seed images with Active Storage. After getting familiar with the tool and reading some documentation we figure out we had to store it in a temporal variable and use the attach method in our seeds.rb file as shown below:
-   ``` ruby
-    (1..n).each do |i|
-        temp = Product.create(
-            title: "Image #{i}" ,
-            price: 20 ,
-            description: "Image number  #{i}" ,
-            user: User.first
-        )
-        file = Rails.root.join('db','img',"#{i}.jpg")
-        temp.image.attach(
-            io: File.open(file),
-            filename: "file.jpg"
-        )  
-    end
-    ```
-*After running `rails db:seed`, the files were successfully added to our database.*
-
-* Heroku Image Seeding: The next challenge was to seed some images in the Heroku repository. The process was pretty much the same with the only difference we had to run Heroku run rails db:seed`
-
-
----
-###  Purpose
-```
-
+### Problem Definition $ Project Purpose
 website purpose
 
-```
----
-###   Functionality
-```
 
+---
+###   Functionality & Features
 website Functionality
-
-```
----
-###  features
-```
-
 website features
 
-```
 ---
 ###  Screenshots
-```
 
 INSERT Screenshots
 
-```
 ---
 ###  Tech Stack
 The tech stack applied in this project include:
@@ -89,11 +47,51 @@ The tech stack applied in this project include:
 * Figma
 ---
 ###  Setup & Configuration Instructions
-```
+Instructions on how to setup, configure and use your App.
+Users:
+1. Head to https://camo-market.herokuapp.com 
+2. Sign up for a free account, you will need your email and a safe password.
+3. You will be presented with a few options:
+    1. Sell, will allow you to list your item and upload an image of it. It also will dislpay all the items you have listed in the past. 
+    2. Buy, will display a variety of items for sale in the platform. 
+    3. My Orders, will show all the previous orders that you have requested. 
+    4. About, will display a short description of our platform propose and vision.
+    5. Contact, will display means to get in contact with the support team.
 
-    Instructions on how to setup, configure and use your App.
+Developers:
+Recommended software requirements for developers:  
+    1. Ruby 2.4.1
+    2. Ruby on Rails 5.2.1
+    3. Postgresql 
 
-```
+Developers also will need an active account for the following services:
+    1. Stripe
+    2. Amazon Web Services (AWS)  and Heroku if planning to deploy. 
+   
+To run locally you need to set up AWS and Stripe keys.  might need to create a .env file and inside it add the following keys:
+
+PUBLISHABLE_KEY =<your publishable key>
+SECRET_KEY =<your secret key>
+
+
+gem "aws-sdk-s3", require: false
+
+gem "devise", "~> 4.5"
+
+gem 'dotenv-rails', groups: [:development, :test]
+
+gem "stripe", "~> 3.29"
+
+#Bootstrap gems
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
+gem 'jquery-rails'
+gem "bootstrap", "~> 4.1"
+
+gem "pundit", "~> 2.0"
+
+
+
+
 ---
 ### Design Documentation
 ```
@@ -130,6 +128,33 @@ Screenshots of Trello board(s)
 ![Image](docs/githubprojects5.png) Github Projects Board #5
 ![Image](docs/githubprojects6.png) Github Projects Board #6
 ![Image](docs/githubprojects7.png) Github Projects Board #7
+
+
+---
+
+###  Problems Encountered
+
+* Local image seeding: One of the first problems we encountered is how to locally seed images with Active Storage. After getting familiar with the tool and reading some documentation we figure out we had to store it in a temporal variable and use the attach method in our seeds.rb file as shown below:
+   ``` ruby
+    (1..n).each do |i|
+        temp = Product.create(
+            title: "Image #{i}" ,
+            price: 20 ,
+            description: "Image number  #{i}" ,
+            user: User.first
+        )
+        file = Rails.root.join('db','img',"#{i}.jpg")
+        temp.image.attach(
+            io: File.open(file),
+            filename: "file.jpg"
+        )  
+    end
+    ```
+*After running `rails db:seed`, the files were successfully added to our database.*
+
+* Heroku Image Seeding: The next challenge was to seed some images in the Heroku repository. The process was pretty much the same with the only difference we had to run Heroku run rails db:seed`
+
+
 
 ---
 # FAQ
