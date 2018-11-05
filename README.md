@@ -67,27 +67,46 @@ Recommended software requirements for developers:
 Developers also will need an active account for the following services:
     1. Stripe
     2. Amazon Web Services (AWS)  and Heroku if planning to deploy. 
-   
-To run locally you need to set up AWS and Stripe keys.  might need to create a .env file and inside it add the following keys:
 
+---
+#### Running locally
+To run locally you will need to do the following steps:
+1. Clone the repository by running: `git clone git@github.com:DiegoRodriguez2018/market-place-rails-project.git`
+2. In terminal open the market-place-rails-project folder and install the corresponing gems by running: `bundle install`
+3. To run locally you might also need to create a .env file and add the corresponding Stripe keys:
+```
 PUBLISHABLE_KEY =<your publishable key>
 SECRET_KEY =<your secret key>
+```
+IMPORTANT: Remember to add .env to your .gitignore so you dont make your keys public. 
 
 
-gem "aws-sdk-s3", require: false
 
-gem "devise", "~> 4.5"
+4. Then setup your database by running:
+  1. `rails db:create`
+  2. `rails db:migrate`
+  3. `rails db:seed` (in case you want to include some sample data)
+5. Run `rails server` 
 
-gem 'dotenv-rails', groups: [:development, :test]
+Now you should be able to see a running version of the website when opening localhost:3000/ in your browser.
 
-gem "stripe", "~> 3.29"
+---
+#### Deploying
+To deploy in heroku you will need to do the following:
+1. Create Heroku and AWS (S3) accounts. 
+2. In the AWS dashboard create a new bucket to store the website Active Record images. 
+3. In Heroku dashboard create a new app and set up all your keys under settings>config vars. Here you need to set up your AWS and Stripe keys. 
+4. Copy your git repository to heroku by typing: `git push heroku master`
+5. Set up your database by running:
+  1. `heroku run rake db:migrate`
+  2. `heroku run rake db:seed` (optional, just in case you want some sample data in your database)
 
-#Bootstrap gems
-gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
-gem 'jquery-rails'
-gem "bootstrap", "~> 4.1"
+Now you should be able to go to your heroku app website  and see the live version of the webapp. 
 
-gem "pundit", "~> 2.0"
+Tip: You can open your heroku app website from terminal by typing: `heroku open` 
+
+
+
 
 
 
