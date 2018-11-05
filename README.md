@@ -104,12 +104,8 @@ Wireframes
 
 ### User Stories and Workflow diagram:
 * This is the UserStories and Workflow digram we created in figma.
-
 ![img](readme-images/stories.png)
-
 ![img](readme-images/stories1.png)
-
-![img](readme-images/stories2.png)
 
 ---
 
@@ -200,7 +196,10 @@ dbdesign database.
 ![Image](readme-images/splash-desktop.png)
 #### Mobile:
 ![Image](readme-images/splash-mobile.png) 
-
+### Index Page Wireframes:
+![Image](readme-images/products-page.png)
+### Show Page Wireframes:
+![Image](readme-images/show-page.png)
 
 
 ### 17. Describe the way tasks are allocated and tracked in your project.
