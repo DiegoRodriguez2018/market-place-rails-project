@@ -2,37 +2,34 @@
 
 </div>
 
+<div class="bg2">
+
+</div>
+
 <%= render "layouts/nav" %>
 <p id="notice"><%= notice %></p>
 
-<body class="products_page">
-  <div id="wrapper">
-      <div id="content">
-
-        <div class="list">
-          <div class="container">
+  <div class="wrapper">
+    <div class="products">
+<div class="feed-grid">
               <% @categories.each do | category| %>
-        <h1><%= category.name %></h1>
-                <% category.products.each do |product| %>
-          <div class="product-card">
-            <span class="tag">
-              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-            </span>
-            <h2><%=link_to product.title , product_path(product)%></h2>
-            <h4><%= category.name %></h4>
-            <figure>
-            <%=image_tag(product.image, height: '40px', width: '40px')%>
-            </figure>
-
-            <span class="price">
-              <%= number_to_currency(product.price/100.0) %>
-            </span>
+              <br/>
+        <div class="categories"><%= category.name %></div>
+        <br/>
+<% category.products.each do |product| %>
+<div class="card">
+<%=image_tag(product.image )%>
+<div class="info-center"><%=link_to product.title , product_path(product)%>
+<br/>
+<div class="price"><br/><%= number_to_currency(product.price/100.0) %> </div>
+</div>
+</div>
 
 <% end %>
-          </div>
+<br>
 <% end %>
-        </div>
+      </div>
+    </div>
+    </div>
 
-      </div>
-      </div>
   </div>
