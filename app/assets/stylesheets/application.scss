@@ -29,7 +29,7 @@
 //      image: asset_url(/app/assets/images/background-camo-tiles.png");
 //   }
 // }
-// $body-bg: transparent;
+$body-bg: transparent;
 
 
 
@@ -76,7 +76,7 @@
   nav ul{
     border: 1px solid #000;
     position:absolute;
-float: left;
+    float: left;
     width:60%;
     padding:0;
     z-index:100;
@@ -141,6 +141,7 @@ float: left;
       }
 }
 .btn-1 {
+    z-index: 3;
     -moz-box-shadow:inset 0px 37px 17px -19px #4d4d4d;
     -webkit-box-shadow:inset 0px 37px 17px -19px #4d4d4d;
     box-shadow:inset 0px 37px 17px -19px #4d4d4d;
@@ -203,7 +204,6 @@ float: left;
     background-size: cover;
     // margin-top: -220px;
     width: 100vw;
-    z-index: -9;
 
 
 
