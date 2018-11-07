@@ -15,15 +15,11 @@ https://github.com/DiegoRodriguez2018/market-place-rails-project
 Disrupt, is a 2 sided marketplace for the selling and re-selling of Disruptive Pattern Materials(DPM). We provide an easy to use platform for users to easily post their materials, whether it be woodlands or desert. We cater to people looking for any style.
 
 ### Problem Definition $ Project Purpose
-
 Before Disrupt, there was no availabe marketplace specific to DPM.
 The purpose of the project is provide a marketplace for the niche market but widespread insterest in Disruptive Pattern Materials, or camouflage.
- 
-
 
 ---
 ###   Functionality & Features
-
 The functionality and features of our marketplace include:
 * User setup, depositing data in an online database.
 * Online Credit Card processing.
@@ -80,7 +76,6 @@ Recommended software requirements for developers:
 Developers also will need an active account for the following services:
   1. Stripe
   2. Amazon Web Services (AWS)  and Heroku if planning to deploy.
-
 ---
 #### Running locally
 To run locally you will need to do the following steps:
@@ -92,8 +87,6 @@ PUBLISHABLE_KEY =<your publishable key>
 SECRET_KEY =<your secret key>
 ```
 IMPORTANT: Remember to add .env to your .gitignore so you dont make your keys public.
-
-
 
 4. Then setup your database by running:
   1. `rails db:create`
@@ -118,12 +111,10 @@ Now you should be able to go to your heroku app website  and see the live versio
 
 Tip: You can open your heroku app website from terminal by typing: `heroku open`
 
-
 ---
 ### Design Documentation
 
 #### Design process
-
 Our design process started by gathering inspiration. Camouflage from a design perspective can be tricky to work with sometimes, as it can present many colours and tones that may not always work too well together in terms of designing a polished UI. We began by looking at how others used camouflage, and how they incorperated it in their designs. Primarily we saw it being used as an accent or pop feature, but also used in greyscale, as it can take the sometimes problematic colour work out of the equation. 
 We then looked at other websites we found appealing. Looking at features the reflected in our app. Such as;
 * E-commerce sites for examples on whats standard.
@@ -131,7 +122,6 @@ We then looked at other websites we found appealing. Looking at features the ref
 * splash page ideas:
 we looked specifically at how we can use a splash page, but still use minimum amount of clicks to get to a purchase.
 * Forms used on websites to deploy data to a database.
-
 
 ---
 ### User Stories:
@@ -224,7 +214,6 @@ Screenshots of Trello board(s)
 ![Image](docs/githubprojects7.png) Github Projects Board #7
 
 ---
-
 ###  Problems Encountered
 
 * Local image seeding: One of the first problems we encountered is how to locally seed images with Active Storage. After getting familiar with the tool and reading some documentation we figure out we had to store it in a temporal variable and use the attach method in our seeds.rb file as shown below:
@@ -308,12 +297,14 @@ Yes go into detail about MVC, don’t describe any model associations yet
 
 ### 9. Explain the different high-level components (abstractions) in your App.
 
-As an beginner-level Rails developer I'm finding rails is a perfect level of abstraction for most types of web development.
-However I'm finding that we use Gems to an extent that it's often pretty difficult to figure out what's going on in the code. I've had a pretty hard time digging through code to figure out how things work, and I'm struggling to see the payoff of this approach.
-
+So in this project there is a few high-level components that handle a series of low-level processes. Some of them include:
+1. Active Record linking our Rails Models to the postgresql database, handling SQL queries and table relationships.
+2. Active Storage linking our Rails Models to the local file storage. 
+3. Embeded ruby files, allowing to generate html documents based on ruby code.
+4. Devise allowing to implement secure encryption and authentication. 
+5. Pundit allowing to implement autherization. 
 
 ### 10. Detail any third party services that your App will use.
-
 * Devise - So users can signup, login and logout. Authentication.
 * Stripe - We're using the stripe API in our code so that we can process credit card payments.
 * Pundit - Is used as a user authorization method.
@@ -321,18 +312,15 @@ However I'm finding that we use Gems to an extent that it's often pretty difficu
 * AWS - Amazon Web Services is being used to host our images  
 
 ### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay,   Airbnb).
+The data structure of similar marketplace apps will include:
 
-Our marketplace is comparable in data structure to any other two sided marketplace.
-A user is able to both list items for sale as well as purchase products.
-
-* The user is able to see items for sale as-well as list items they would like to sell.
-* The user can both pay and receive payments.
-* Order products and receive orders.
-* View their orders as-well as see orders made.
-* Upload images to represent what they're selling.
-etc.
-
-* User, Product, Order, OrderToProduct
+* A User Model, which will allow to both sell or purchase a product.
+* A Product Model, that will display important information about the items for sale. 
+* A Category Model to allow to organise our items. 
+* An Order Model that will allow to keep track of the transactions and shipping details. 
+* A Charge Model to keep track of the electronic transactions. 
+* A Shopping Cart to allow keeping track of multiple orders. 
+  
 
 ### 12. Discuss the database relations to be implemented.
 User many to many  products
@@ -358,11 +346,9 @@ Orders one to many products
   * has_many :orders
 
 ### 14. Provide your database schema design.
-
-#### Database Structure:
 ![img](docs/database-design.png)
 
-#### Activer Record Schema:
+#### Active Record Schema:
 The postgresql elements implemented in this website are as follows:
 
 ```ruby
