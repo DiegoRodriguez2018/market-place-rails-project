@@ -276,12 +276,7 @@ Some of the software used in the development of this app include:
 * Figma
   
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
-We decided to use postgresql for our database as it supports a wide range of data types allowing us to upscale our website
-
-db design structure
-
-(Here I would talk about how postgres is different to sqlite, justify how postgres is way more powerful and how it fits really nicely into rails.
-)
+For the current website requirements we could have used sqlite but thinking bout scalability we decided to base our app on postrgresql, as it supports a wide range of data types allowing us to upgrade our website in the future. 
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
 postgres database with this talbes: (show schema, or postgress output)
