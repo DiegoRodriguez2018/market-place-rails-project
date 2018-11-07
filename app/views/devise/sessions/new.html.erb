@@ -1,8 +1,7 @@
 <div class="bg">
-<%= render "layouts/forms_nav" %>
 <div class="sign-in-styles">
 <h1 class="glitch-small" data-text="LOG IN">Log in</h1>
-
+<%= render "layouts/forms_nav" %>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -27,5 +26,6 @@
 <% end %>
 <br>
 <%= render "devise/shared/links" %>
+
 </div>
 </div>
