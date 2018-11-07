@@ -279,6 +279,7 @@ Some of the software used in the development of this app include:
 For the current website requirements we could have used sqlite but thinking bout scalability we decided to base our app on postrgresql, as it supports a wide range of data types allowing us to upgrade our website in the future. 
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
+
 The postgresql elements implemented in this website are as follows:
 
 ```ruby
