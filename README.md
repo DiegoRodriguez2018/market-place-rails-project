@@ -18,7 +18,7 @@ Disrupt, is a 2 sided marketplace for the selling and re-selling of Disruptive P
 
 Before Disrupt, there was no availabe marketplace specific to DPM.
 The purpose of the project is provide a marketplace for the niche market but widespread insterest in Disruptive Pattern Materials, or camouflage.
-
+ 
 
 
 ---
