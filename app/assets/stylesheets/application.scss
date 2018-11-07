@@ -304,7 +304,7 @@
 }
 
     .subtext {
-  font-size: .8em;
+  font-size: 1em;
   // font-size: 20.8px;
   font-family: "Antonio", sans-serif;
   // font-weight: 1;
@@ -312,6 +312,7 @@
   text-transform: uppercase;
   // margin-left: 20vw;
   margin-bottom: -20px;
+  margin-top: -10px;
 }
 
 .sign-in-styles {
@@ -336,17 +337,115 @@ a{
 }
 
 .product-form-styles {
+
   border: 2px solid #ffffff;
   background-color: #ffffff;
-  padding-top: 20px;
+  // padding-top: 20px;
   text-align: center;
-  margin-top: 30vh;
-  margin-left: 210px;
+  margin-top: 9vh;
+  // margin-left: 210px;
   justify-content: center;
+  align-self: center;
   // box-shadow: -4px 4px 40px #949494;
 
-width: 400px;
-height: 400px;
+width: auto;
+height: auto;
+
+section{
+  width: 500px;
+  margin:50px auto;
+  p{
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+}
+}
+
+.orders-styles {
+
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  // padding-top: 20px;
+  text-align: center;
+  margin-top: 10vh;
+  // margin-left: 210px;
+  justify-content: center;
+  align-self: center;
+  overflow: scroll;
+  // box-shadow: -4px 4px 40px #949494;
+
+width: auto;
+height: 60vh;
+
+section{
+  width: 500px;
+  margin:50px auto;
+  p{
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+}
+
+table{
+  width:100%;
+  margin: auto;
+  tr{
+    width: 100%;
+  }
+  th,td{
+    box-sizing:border-box;
+    padding: 15px;
+  }
+  thead{
+    th{
+      background: #000;
+      color: #fff;
+      text-align: left;
+    }
+  }
+
+  tbody{
+    text-align: left;
+    th{
+      background: #eee;
+    }
+  }
+}
+
+.sp{
+  width: 420px;
+  margin-top: 40px;
+  tr{
+      display: block;
+      width: 100%;
+    }
+     thead{
+      display: none;
+    }
+    tbody{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+      th{
+        list-style:none;
+      }
+      td{
+        margin-left: 40px;
+      }
+      th,td{
+        width: 100%;
+        display: list-item;
+      }
+    }
+}
+
+
+form{
+  display: block;
+justify-content: center;
+}
 
 a{
 font-family: "Antonio", sans-serif;
@@ -354,6 +453,17 @@ font-size:13px;
 text-transform: uppercase;
 letter-spacing: 0.01em;
 }
+
+.text {
+  display: block;
+  align-items: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  font-family: "Antonio", sans-serif;
+  letter-spacing: 0.01em;
+  font-weight: bold;
+}
+
 }
 
 
