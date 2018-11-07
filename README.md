@@ -165,7 +165,7 @@ We used figma to create a User Stories / Workflow Diagram of the project.
 ![img](docs/stories1.png)
 
 ---
-#### Wireframes
+### Wireframes
 ### Inspiration:
 ![Image](docs/inspiration.png)
 ### Colour Inspiration:
@@ -189,7 +189,7 @@ We used figma to create a User Stories / Workflow Diagram of the project.
 ![Image](docs/show-page.png)
 
 ---
-#### Database Entity Relationship Diagram (ERD)
+### Database Entity Relationship Diagram (ERD)
 After discussing about our database structure we agreed to start our project with this database entity relationship diagram:
 
 ![img](docs/database-design.png)
@@ -199,19 +199,14 @@ As our Heroku app server is based in the US, we decided to base our AWS server i
 
 ---
 ### Details of planning process:
-```
-including,
-Project plan & timeline
-Screenshots of Trello board(s)
-```
 
-![Image](docs/githubprojects1.png) GitHub Projects Board #1
-![Image](docs/githubprojects2.png) Github Projects Board #2
-![Image](docs/githubprojects3.png) Github Projects Board #3
-![Image](docs/githubprojects4.png) Github Projects Board #4
-![Image](docs/githubprojects5.png) Github Projects Board #5
-![Image](docs/githubprojects6.png) Github Projects Board #6
-![Image](docs/githubprojects7.png) Github Projects Board #7
+![Image](docs/githubprojects1.png)
+![Image](docs/githubprojects2.png)
+![Image](docs/githubprojects3.png)
+![Image](docs/githubprojects4.png)
+![Image](docs/githubprojects5.png)
+![Image](docs/githubprojects6.png)
+![Image](docs/githubprojects7.png)
 
 ---
 ###  Problems Encountered
