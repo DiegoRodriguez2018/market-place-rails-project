@@ -279,48 +279,7 @@ Some of the software used in the development of this app include:
 For the current website requirements we could have used sqlite but thinking bout scalability we decided to base our app on postrgresql, as it supports a wide range of data types allowing us to upgrade our website in the future. 
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
-postgres database with this talbes: (show schema, or postgress output)
-
-(Here I would talk about the specifics of postgres, how it connects to your models, how it sits in overall MVC
-)
-
-### 8. Describe the architecture of your App.
-(Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
-
-Yes go into detail about MVC, don’t describe any model associations yet
-)
-
-### 9. Explain the different high-level components (abstractions) in your App.
-(you could talk how ruby gems are an abstraction from your own ruby code
-also about how active record is an abstraction of sql)
-
-
-### 10. Detail any third party services that your App will use.
-Devise, Stripe, Pundit, Heroku, AWS
-
-### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay,   Airbnb).
-User, Product, Message, Conversation, Order, OrderToProduct, Shopping cart,
-
-### 12. Discuss the database relations to be implemented.
-User many to many  products
-Orders one to many products
-
-(This is more regarding why we need a join table in certain instances in your app, why we need a foreign keys in different tables, think about the stuff we did when we first started sql
-)
-
-### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
-User has many products
-Products has many users ....
-
-(Think about rails active record associations, has_many, has_one, belongs_to
-)
-
-### 14. Provide your database schema design.
-
-#### Database Structure:
-![img](docs/database-design.png)
-
-#### Activer Record Schema:
+The postgresql elements implemented in this website are as follows:
 
 ```ruby
 ActiveRecord::Schema.define(version: 2018_10_30_045941) do
@@ -400,6 +359,40 @@ ActiveRecord::Schema.define(version: 2018_10_30_045941) do
 end
 ```
 
+### 8. Describe the architecture of your App.
+(Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
+
+Yes go into detail about MVC, don’t describe any model associations yet
+)
+
+### 9. Explain the different high-level components (abstractions) in your App.
+(you could talk how ruby gems are an abstraction from your own ruby code
+also about how active record is an abstraction of sql)
+
+
+### 10. Detail any third party services that your App will use.
+Devise, Stripe, Pundit, Heroku, AWS
+
+### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay,   Airbnb).
+User, Product, Message, Conversation, Order, OrderToProduct, Shopping cart,
+
+### 12. Discuss the database relations to be implemented.
+User many to many  products
+Orders one to many products
+
+(This is more regarding why we need a join table in certain instances in your app, why we need a foreign keys in different tables, think about the stuff we did when we first started sql
+)
+
+### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
+User has many products
+Products has many users ....
+
+(Think about rails active record associations, has_many, has_one, belongs_to
+)
+
+### 14. Provide your database schema design.
+![img](docs/database-design.png)
+
 ### 15. Provide User stories for your App.
 * Refer to UserStories in README
 
@@ -460,6 +453,4 @@ Pundit - controls authorisations and what users can see.)
 
 ### 23. Research what your legal obligations are in relation to handling user data.
 
-In handling user data, we must make sure we stick to privacy laws. 
-As a business owner, it is our responsibility to protect personal information from things like; theft, loss, unauthorised access and modification. 
-As permitted under the Privacy Act 1988, we have to take reasonable steps to destroy or de-identify personal information once it is no longer needed.
+# EATHAN TO COMPLETE
