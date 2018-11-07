@@ -280,75 +280,6 @@ Some of the software used in the development of this app include:
 For the current website requirements we could have used sqlite but thinking bout scalability we decided to base our app on postrgresql, as it supports a wide range of data types allowing us to upgrade our website in the future. 
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
-
-postgres database with this talbes: (show schema, or postgress output)
-
-(Here I would talk about the specifics of postgres, how it connects to your models, how it sits in overall MVC
-)
-
-The postgresql elements implemented in this website are as follows:
-
-
-### 8. Describe the architecture of your App.
-(Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
-
-Yes go into detail about MVC, don’t describe any model associations yet
-)
-
-### 9. Explain the different high-level components (abstractions) in your App.
-
-So in this project there is a few high-level components that handle a series of low-level processes. Some of them include:
-1. Active Record linking our Rails Models to the postgresql database, handling SQL queries and table relationships.
-2. Active Storage linking our Rails Models to the local file storage. 
-3. Embeded ruby files, allowing to generate html documents based on ruby code.
-4. Devise allowing to implement secure encryption and authentication. 
-5. Pundit allowing to implement autherization. 
-
-### 10. Detail any third party services that your App will use.
-* Devise - So users can signup, login and logout. Authentication.
-* Stripe - We're using the stripe API in our code so that we can process credit card payments.
-* Pundit - Is used as a user authorization method.
-* Heroku - We're using Heroku to host our live website. So it can be see via the URL supplied.
-* AWS - Amazon Web Services is being used to host our images  
-
-### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay,   Airbnb).
-The data structure of similar marketplace apps will include:
-
-* A User Model, which will allow to both sell or purchase a product.
-* A Product Model, that will display important information about the items for sale. 
-* A Category Model to allow to organise our items. 
-* An Order Model that will allow to keep track of the transactions and shipping details. 
-* A Charge Model to keep track of the electronic transactions. 
-* A Shopping Cart to allow keeping track of multiple orders. 
-  
-
-### 12. Discuss the database relations to be implemented.
-User many to many  products
-Orders one to many products
-
-(This is more regarding why we need a join table in certain instances in your app, why we need a foreign keys in different tables, think about the stuff we did when we first started sql
-)
-
-### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other
-
-* Category
-  * has_many :products
-* Order
-  * belongs_to :user
-  * belongs_to :product
-* Product
-  * belongs_to :user
-  * belongs_to :category
-  * has_one_attached :image
-  * has_many :orders
-* User
-  * has_many :products
-  * has_many :orders
-
-### 14. Provide your database schema design.
-![img](docs/database-design.png)
-
-#### Active Record Schema:
 The postgresql elements implemented in this website are as follows:
 
 ```ruby
@@ -429,10 +360,100 @@ ActiveRecord::Schema.define(version: 2018_10_30_045941) do
 end
 ```
 
+### 8. Describe the architecture of your App.
+(Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
+
+Yes go into detail about MVC, don’t describe any model associations yet
+)
+
+### 9. Explain the different high-level components (abstractions) in your App.
+So in this project there is a few high-level components that handle a series of low-level processes. Some of them include:
+1. Active Record linking our Rails Models to the postgresql database, handling SQL queries and table relationships.
+2. Active Storage linking our Rails Models to the local file storage. 
+3. Embeded ruby files, allowing to generate html documents based on ruby code.
+4. Devise allowing to implement secure encryption and authentication. 
+5. Pundit allowing to implement autherization. 
+
+### 10. Detail any third party services that your App will use.
+* Devise - So users can signup, login and logout. Authentication.
+* Stripe - We're using the stripe API in our code so that we can process credit card payments.
+* Pundit - Is used as a user authorization method.
+* Heroku - We're using Heroku to host our live website. So it can be see via the URL supplied.
+* AWS - Amazon Web Services is being used to host our images  
+
+### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay,   Airbnb).
+The data structure of similar marketplace apps will include:
+
+* A User Model, which will allow to both sell or purchase a product.
+* A Product Model, that will display important information about the items for sale. 
+* A Category Model to allow to organise our items. 
+* An Order Model that will allow to keep track of the transactions and shipping details. 
+* A Charge Model to keep track of the electronic transactions. 
+* A Shopping Cart to allow keeping track of multiple orders. 
+  
+
+### 12. Discuss the database relations to be implemented.
+User many to many  products
+Orders one to many products
+
+(This is more regarding why we need a join table in certain instances in your app, why we need a foreign keys in different tables, think about the stuff we did when we first started sql
+)
+
+### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other
+
+* Category
+  * has_many :products
+* Order
+  * belongs_to :user
+  * belongs_to :product
+* Product
+  * belongs_to :user
+  * belongs_to :category
+  * has_one_attached :image
+  * has_many :orders
+* User
+  * has_many :products
+  * has_many :orders
+
+### 14. Provide your database schema design.
+![img](docs/database-design.png)
+
 ### 15. Provide User stories for your App.
 
-* Refer to UserStories in README
+#### Buyer User Stories:
+* As a Buyer, I want to create an account, so that I can buy and browse on the website.
+* As a Buyer, I want to create an account, so that I can buy, sell and browse on the website.
+* As a Buyer, I want to pay with credit card, so I can complete a purchase.
+* As a Buyer, I want to message other users, so I can enquire about items and respond to enquiries.
+* As a Buyer, I want to search listings, so that I can find something specific within listed items.
+* As a Buyer, I want to edit or delete my existing listings, so that I can change the description or remove the listing.
+* As a Buyer, I want to add images to the item I’m listing, so that users can see a visual representation of the item listed.
+* As a Buyer, I want to add a description of the item I’m listing, so that users can view a description of the item listed.
+* As a Buyer, I want to list items for sale, so that users can see and purchase my items.
+* As a Buyer, I want to view listed items, so that I can choose whether or not to make a purchase.
+* As a Buyer, I want to create an account, so that I can buy and sell on the website.
+* As a Buyer, I want to receive an e-mail receipt, so that I can see the purchasing details.
+* As a Buyer, I want to see information about camouflage patterns, so I can find the right style for me.
+* As a Buyer, I want a user account page, so I can update my account information.
+* As a Buyer, I want to search for camouflage for types relating to specific environments and countries, so that I can find a suitable camouflage for my needs.
+* As a Buyer, I want to see what items I currently have listed for sale, so I can keep track ofwhat I’m selling.
+* As a Seller, I want to list items for sale, so that users can see and purchase my items.
 
+#### Seller User Stories:
+* As a Seller, I want to create an account, so that I can sell, manage my items, and browse on the website.
+* As a Seller, I want to message other users, so I can enquire about items and respond to enquiries.
+* As a Seller, I want to view listed items, so that I can choose whether or not to make a purchase.
+* As a Seller, I want to search listings, so that I can find something specific within listed items.
+* As a Seller, I want to find information about camouflage patterns, so I know what it is and can be used for.
+* As a Seller, I want a user account page, so I can update my account information.
+* As a Seller, I want to edit or delete my existing listings, so that I can change the description or remove the listing.
+* As a Seller, I want to add images to the item I’m listing. , so that users can see a visual representation of the item listed.
+* As a Seller, I want to add a description of the item I’m listing, so that users can view a description of the item listed.
+* As a Seller, I want to see what items I currently have listed for sale, so I can keep track of what I’m selling.
+* As a Seller, I want to pay with my credit card, so that I can complete a purchase.
+* As a Seller, I want to search for camouflage for types relating to specific environments and countries, so that I can find a suitable camouflage for my needs.
+* As a Seller, I want to receive an e-mail receipt after purchase has been completed, so that I can see the purchasing details.
+  
 ### 16. Provide Wireframes for your App.
 ### Inspiration:
 ![Image](docs/inspiration.png)
@@ -483,10 +504,7 @@ GET BIANCAS GROUP TO DO
 * We don't want sensitive user information to be leaked, read or obtained by third parties or users who are not authorized to do so.
 So for this reason we have implemented the items listed in the following question.
 
-
-
 ### 22. Discuss methods you will use to protect information and data.
-
 * We have taken measures to maintain user confidentiality and information security.
 Citing the use of API's such as Stripe which will encrypt and protect user credit-card information when it is used to make purchases.
 * We have implemented Ruby Gems which offer both, authentication, and authorization processes for user accounts. This offer Users the security of knowing no one else will be able to edit or see they're information unless logged in from the authorised account.
