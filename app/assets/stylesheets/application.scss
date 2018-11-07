@@ -340,7 +340,7 @@ height: 400px;
     }
   }
 
-  .blackglossyCSSButtonbutton
+  .blackglossyCSSButtonbutton2
 {
     /* General  */
     text-color: silver;
@@ -436,4 +436,62 @@ height: 400px;
    /*  Opacity  */
  opacity: 1.000;
   }
+}
+
+$teal: black;
+
+body {
+  font-family: 'Antonio', sans-serif;
+}
+
+.wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100px;
+  width: 200px;
+  margin: auto;
+}
+
+.blackglossyCSSButtonbutton {
+  background-color: transparent;
+  border: 2px solid $teal;
+  border-radius: 4px;
+  display: inline-block;
+  color: $teal;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  height: 40px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  margin: 5px;
+  overflow: hidden;
+  padding: 0 22px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkHL4MKlpd4X_YGraK7sEPmN8GHrMfIAoA2QhhKhWdrRVczfCVCw);
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+  }
+}
+
+.roll-text {
+  display: block;
+  position: relative;
+  transition: all 420ms cubic-bezier(.175,.885,.32,1.275);
+}
+
+.roll-text:last-child {
+  color: #fff;
+}
+
+.rollover:hover .roll-text:first-child {
+  margin-top: -38px;
 }
