@@ -12,36 +12,36 @@
   <% end %>
 
   <div class="text">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :title %><br/>
+    <%= form.text_field :title, :required => true %>
   </div>
 
   <div class="text">
-    <%= form.label :price %>
-    <%= form.text_field :price, value: number_with_precision((product.price||0)/100.0, :precision => 2) %>
+    <%= form.label :price %><br/>
+    <%= form.text_field :price, :required => true, value: number_with_precision((product.price||0)/100.0, :precision => 2) %>
   </div>
 
   <div class="text">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.label :description %><br/>
+    <%= form.text_area :description, :required => true %>
   </div>
 
   <div class="text">
-    <%= form.label :stock %>
-    <%= form.number_field :stock %>
+    <%= form.label :stock %><br/>
+    <%= form.number_field :stock, :required => true %>
   </div>
 
   <div class="text">
-    <%= form.label :category %>
-    <%= select_tag(:category, options_for_select(@select_options,@select_options.length)) %>
+    <%= form.label :category %><br/>
+    <%= select_tag(:category, options_for_select(@select_options,@select_options.length), :required => true )%>
   </div>
 
   <div class="text">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.label :image %><br/>
+    <%= form.file_field :image, :required => true %>
   </div>
 
-  <div class="actions">
+  <div class="btn-1">
     <%= form.submit %>
   </div>
 
