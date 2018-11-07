@@ -437,40 +437,6 @@ ActiveRecord::Schema.define(version: 2018_10_30_045941) do
 end
 ```
 
-### 8. Describe the architecture of your App.
-(Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
-
-Yes go into detail about MVC, don’t describe any model associations yet
-)
-
-### 9. Explain the different high-level components (abstractions) in your App.
-(you could talk how ruby gems are an abstraction from your own ruby code
-also about how active record is an abstraction of sql)
-
-
-### 10. Detail any third party services that your App will use.
-Devise, Stripe, Pundit, Heroku, AWS
-
-### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay,   Airbnb).
-User, Product, Message, Conversation, Order, OrderToProduct, Shopping cart,
-
-### 12. Discuss the database relations to be implemented.
-User many to many  products
-Orders one to many products
-
-(This is more regarding why we need a join table in certain instances in your app, why we need a foreign keys in different tables, think about the stuff we did when we first started sql
-)
-
-### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
-User has many products
-Products has many users ....
-
-(Think about rails active record associations, has_many, has_one, belongs_to
-)
-
-### 14. Provide your database schema design.
-![img](docs/database-design.png)
-
 ### 15. Provide User stories for your App.
 
 * Refer to UserStories in README
