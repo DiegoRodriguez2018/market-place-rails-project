@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<%= render "layouts/nav" %>
   <head>
     <title>MarketplaceProject</title>
     <%= csrf_meta_tags %>
@@ -9,8 +10,6 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <%= render "layouts/nav" %>
   <!-- <body class="home_page_layout"> -->
     <%= yield %>
-  </body>
 </html>

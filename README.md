@@ -331,8 +331,19 @@ Orders one to many products
 )
 
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
-User has many products
-Products has many users ....
+* Category
+has_many :products
+* Order
+belongs_to :user
+belongs_to :product
+* Product
+belongs_to :user
+belongs_to :category
+has_one_attached :image
+has_many :orders
+* User
+has_many :products
+has_many :orders
 
 (Think about rails active record associations, has_many, has_one, belongs_to
 )
@@ -423,6 +434,7 @@ end
 ```
 
 ### 15. Provide User stories for your App.
+
 * Refer to UserStories in README
 
 ### 16. Provide Wireframes for your App.
@@ -451,10 +463,10 @@ end
 ### 17. Describe the way tasks are allocated and tracked in your project.
 We decided to use GitHub Projects to manage our tasks. Before start, each morning we had a chat to discuss what were the goals for the day and what each team member is working on. We also discussed what were the current issues we were facing and then as a team created a few issues in GitHub and allocated a responsible team member.
 
-Communication continued during the day but usually everyone was assinged different tasks and everytime we completed an important stage we added a commit comment to close the issue in GitHub.
+Communication continued during the day but usually everyone was assigned different tasks and every-time we completed an important stage we added a commit comment to close the issue in GitHub.
 
 ### 18. Discuss how Agile methodology is being implemented in your project.
-We implemented agile methodolgy by:
+We implemented agile methodology by:
 * Regularly testing our app
 * Deploying and getting customer feedback early.
 * Focusing in software functionality first.
@@ -462,23 +474,26 @@ We implemented agile methodolgy by:
 * Aim for a sustainable development so we could maintain a constant pace.
 
 ### 19. Provide an overview and description of your Source control process.
-We decided that each team member was going to have access to push and authorize pull request in GitHub. We found this helped us to develop and deploy our website fast but also required us to communicate often and have a discussion of what changes we were implementing. Aslo, depending of the complexity of the pull request we reviewed the code as a team in order to avoid issues later.
+We decided that each team member was going to have access to push and authorize pull request in GitHub. We found this helped us to develop and deploy our website fast but also required us to communicate often and have a discussion of what changes we were implementing. Also, depending of the complexity of the pull request we reviewed the code as a team in order to avoid issues later.
 
 ### 20. Provide an overview and description of your Testing process.
 
 (As Scott just mentioned on slack feedback from another student would suffice.
 )
-
-
+GET BIANCAS GROUP TO DO
 
 ### 21. Discuss and analyse requirements related to information system security.
-(Make this a more general analysis of the ethics behind handling user data.
-)
+
+* We don't want sensitive user information to be leaked, read or obtained by third parties or users who are not authorized to do so.
+So for this reason we have implemented the items listed in the following question.
+
+
 
 ### 22. Discuss methods you will use to protect information and data.
-(Encryption - hashing passwords automatically.
-Stripe - what manages and protects all credit card information
-Pundit - controls authorisations and what users can see.)
+
+* We have taken measures to maintain user confidentiality and information security.
+Citing the use of API's such as Stripe which will encrypt and protect user credit-card information when it is used to make purchases.
+* We have implemented Ruby Gems which offer both, authentication, and authorization processes for user accounts. This offer Users the security of knowing no one else will be able to edit or see they're information unless logged in from the authorised account.
 
 ### 23. Research what your legal obligations are in relation to handling user data.
 
