@@ -258,8 +258,26 @@ The network infrastructure for this app include the following services:
 As our Heroku app server is based in the US, we decided to base our AWS server in the US as well (us-east-1). As the servers are going to be located close to each other we hope the performance of our web app to be improved.
 
 ### 5. Identify and describe the software to be used in your App.
-
+Some of the software used in the development of this app include:
+* HTML
+* CSS
+* SCSS
+* Ruby on Rails
+    * Active Storage
+    * Active Record
+* Amazon Web Services
+* Heroku
+* Devise
+* Pundit
+* Bootstrap
+* GIT
+* GitHub
+* GitHub Projects
+* Figma
+  
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
+We decided to use postgresql for our database as it supports a wide range of data types allowing us to upscale our website
+
 db design structure
 
 (Here I would talk about how postgres is different to sqlite, justify how postgres is way more powerful and how it fits really nicely into rails.
@@ -272,8 +290,6 @@ postgres database with this talbes: (show schema, or postgress output)
 )
 
 ### 8. Describe the architecture of your App.
-
-
 (Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
 
 Yes go into detail about MVC, don’t describe any model associations yet
