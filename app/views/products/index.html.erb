@@ -2,14 +2,12 @@
 
 </div>
 
-
-<%= render "layouts/nav" %>
 <p id="notice"><%= notice %></p>
 
   <div class="wrapper">
-    <div class="products">       
+    <div class="products">
       <div class="feed-grid">
-          
+
         <% @categories.each do | category| %>
         <br/>
         <div class="categories"><hr><%= category.name %><hr></div>
