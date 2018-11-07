@@ -281,16 +281,14 @@ Some of the software used in the development of this app include:
 For the current website requirements we could have used sqlite but thinking bout scalability we decided to base our app on postrgresql, as it supports a wide range of data types allowing us to upgrade our website in the future. 
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 postgres database with this talbes: (show schema, or postgress output)
 
 (Here I would talk about the specifics of postgres, how it connects to your models, how it sits in overall MVC
 )
-=======
+
 The postgresql elements implemented in this website are as follows:
->>>>>>> e65b771aff894e9ea4624e58f5c46ee043f04fb9
+
 
 ### 8. Describe the architecture of your App.
 (Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
@@ -345,12 +343,8 @@ Products has many users ....
 #### Database Structure:
 ![img](docs/database-design.png)
 
-<<<<<<< HEAD
 #### Activer Record Schema:
 The postgresql elements implemented in this website are as follows:
-=======
-
->>>>>>> e65b771aff894e9ea4624e58f5c46ee043f04fb9
 
 ```ruby
 ActiveRecord::Schema.define(version: 2018_10_30_045941) do
