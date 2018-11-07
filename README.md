@@ -12,22 +12,26 @@ https://github.com/DiegoRodriguez2018/market-place-rails-project
 
 ---
 ## Project Description
-Disrupt, is a 2 sided marketplace for the selling and re-selling of Disruptive Pattern Materials(DPM). We provide an easy to use platform for users to easily post their materials, whether it be woodlands or desert we cater all styles.
+Disrupt, is a 2 sided marketplace for the selling and re-selling of Disruptive Pattern Materials(DPM). We provide an easy to use platform for users to easily post their materials, whether it be woodlands or desert. We cater to people looking for any style.
 
 ### Problem Definition $ Project Purpose
 
-Before Disrupt.
-The purpose of the project is provide a marketplace for the niche market but widespread insterest in Disruptive Pattern Materials, or camouflage. It
+Before Disrupt, there was no availabe marketplace specific to DPM.
+The purpose of the project is provide a marketplace for the niche market but widespread insterest in Disruptive Pattern Materials, or camouflage.
 
 
 
 ---
 ###   Functionality & Features
 
-# EATHAN TO COMPLETE
+The functionality and features of our marketplace include:
+* User setup, depositing data in an online database.
+* Online Credit Card processing.
+* A view of products created and sold by other users.
+* A Contact page detailing ways to contact the marketplace.
+* A page to create products to sell, depositing into a database.
+* 3 clicks to purchase a product.
 
-website Functionality
-website features
 
 ---
 ###  Screenshots
