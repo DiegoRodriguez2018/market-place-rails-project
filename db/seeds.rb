@@ -17,13 +17,13 @@ User.create(email:"user3@gmail.com", password:"123456")
 
 
 
-categories = ["Snow","Woodland and Jungle", "Dessert and Beach", "Urban"]
+categories = ["Woodland and Jungle", "Dessert and Beach", "Urban"]
 
 categories.each do |category|
     Category.create(name: category)
 end
 
-entries = ['2.AusCam Woodland.jpg','2.Barracuda_Woodland.jpg','2.Comma.jpg','2.Elm-Leaf.jpg','2.M49.jpg','2.palm frond.jpg','2.Plane-Tree.jpg','2.South-African Grass.jpg','2.Spindly Finger.jpg','2.Trebark.jpg','3.Amoeba.jpg','3.Czech Desert.jpg','3.Daguet.jpg','3.Deer Hunter.jpg','3.Desert Cloud.jpg','3.Duck Hunter.jpg','3.Four Colour Desert DPM.jpg','3.Frog-Skin Beach.jpg','3.M98 desert.jpg','3.night time desert grid.jpg','3.NunChuck.jpg','3.Oak-Leaf.jpg','3.Sand.jpg','3.six-colour desert.jpg','3.Splinter.jpg','3.Swedish Desert Trial Pattern.jpg','3.three-colour desert.jpg','3.Two Colour DPM.jpg','4.Bape Peter.jpg','4.Bubble.jpg','4.GaboneseGendarmerie.jpg','4.G-Camo.jpg','4.Latvian Two-Colour Urban.jpg','4.Lebo Urban DPM.jpg','4.SWAT.jpg','4.Thai Night Manouevres.jpg','4.The Rock Machine.jpg','4.Two-Colour Urban.jpg','4.Urban British DPM.jpg','4.Urban Woodland Swat.jpg']
+entries = ['2.AusCam Woodland.jpg','2.Barracuda_Woodland.jpg','2.Comma.jpg','2.Elm-Leaf.jpg','2.M49.jpg','2.palm frond.jpg','2.Plane-Tree.jpg','2.South-African Grass.jpg','2.Spindly Finger.jpg','2.Trebark.jpg','3.Amoeba.jpg','3.Czech Desert.jpg','3.Daguet.jpg','3.Deer Hunter.jpg','3.Desert Cloud.jpg','3.Duck Hunter.jpg','3.Four Colour Desert DPM.jpg','3.Frog-Skin Beach.jpg','3.M98 desert.jpg','3.night time desert grid.jpg','3.NunChuck.jpg','3.Oak-Leaf.jpg','3.Sand.jpg','3.six-colour desert.jpg','3.Splinter.jpg','3.Swedish Desert Trial Pattern.jpg','3.three-colour desert.jpg','3.Two Colour DPM.jpg','4.Bape Peter.jpg','4.Bubble.jpg','4.Gabonese Gendarmerie.jpg','4.G-Camo.jpg','4.Latvian Two-Colour Urban.jpg','4.Lebo Urban DPM.jpg','4.SWAT.jpg','4.Thai Night Manouevres.jpg','4.The Rock Machine.jpg','4.Two-Colour Urban.jpg','4.Urban British DPM.jpg','4.Urban Woodland Swat.jpg']
 
 def get_title (str)
     result = str.split("")
@@ -47,7 +47,7 @@ entries.each do |entry|
         description: "10m2 of #{get_title(entry)} camouflage ideal for #{get_category_name(entry,categories)} terrain." ,
         stock: 100,
         user: User.find(rand(1..3)),
-        category: Category.find(get_category_id(entry))
+        category: Category.find(get_category_id(entry)-1)
     )
     file = Rails.root.join('db','img',entry) 
     temp.image.attach(
