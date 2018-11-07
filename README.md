@@ -274,7 +274,7 @@ Some of the software used in the development of this app include:
 * GitHub
 * GitHub Projects
 * Figma
-  
+
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
 We decided to use postgresql for our database as it supports a wide range of data types allowing us to upscale our website
 
@@ -303,25 +303,25 @@ However I'm finding that we use Gems to an extent that it's often pretty difficu
 
 ### 10. Detail any third party services that your App will use.
 
-Devise - So users can signup, login and logout. Authentication.
-Stripe - We're using the stripe API in our code so that we can process credit card payments.
-Pundit - Is used as a user authorization method.
-Heroku - We're using Heroku to host our live website. So it can be see via the URL supplied.
-AWS - Amazon Web Services is being used to host our images  
+* Devise - So users can signup, login and logout. Authentication.
+* Stripe - We're using the stripe API in our code so that we can process credit card payments.
+* Pundit - Is used as a user authorization method.
+* Heroku - We're using Heroku to host our live website. So it can be see via the URL supplied.
+* AWS - Amazon Web Services is being used to host our images  
 
 ### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay,   Airbnb).
 
 Our marketplace is comparable in data structure to any other two sided marketplace.
 A user is able to both list items for sale as well as purchase products.
 
-The user is able to see items for sale as-well as list items they would like to sell.
-The user can both pay and receive payments.
-Order products and receive orders.
-View their orders as-well as see orders made.
-Upload images to represent what they're selling.
+* The user is able to see items for sale as-well as list items they would like to sell.
+* The user can both pay and receive payments.
+* Order products and receive orders.
+* View their orders as-well as see orders made.
+* Upload images to represent what they're selling.
 etc.
 
-User, Product, Order, OrderToProduct
+* User, Product, Order, OrderToProduct
 
 ### 12. Discuss the database relations to be implemented.
 User many to many  products
@@ -482,6 +482,6 @@ Pundit - controls authorisations and what users can see.)
 
 ### 23. Research what your legal obligations are in relation to handling user data.
 
-In handling user data, we must make sure we stick to privacy laws. 
-As a business owner, it is our responsibility to protect personal information from things like; theft, loss, unauthorised access and modification. 
+In handling user data, we must make sure we stick to privacy laws.
+As a business owner, it is our responsibility to protect personal information from things like; theft, loss, unauthorised access and modification.
 As permitted under the Privacy Act 1988, we have to take reasonable steps to destroy or de-identify personal information once it is no longer needed.
