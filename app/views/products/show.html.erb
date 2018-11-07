@@ -1,8 +1,14 @@
-<div class=bg>
+<div class=bg4>
   <%= render "layouts/nav" %>
 <p id="notice"><%= notice %></p>
 
+
+
+<div class="show-styles">
 <%= image_tag(@product.image, width:400) %>
+<div class="glitch-small" data-text="<%= @product.title %>">
+<%= @product.title %></div>
+<div class="subtext">Forgot your password?</div>
 
 <p>
    Posted By: <%= @product.user.email %>
@@ -149,3 +155,5 @@ $(window).on('popstate', function() {
 });
 
 </script>
+</div>
+</div>

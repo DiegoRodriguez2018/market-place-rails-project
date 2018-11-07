@@ -1,7 +1,9 @@
 <div class="bg4">
 </div>
-<h3 class="text" data-text="My orders"> My Orders </h3>
-<p>
+<%= render "layouts/nav" %>
+
+<div class= "orders-styles">
+<div class="glitch-small" data-text="My orders"> My Orders </div>
   <% if @orders.size != 0 %>
     <table class="table-striped">
       <thead>
@@ -34,3 +36,5 @@
     </table>
   <% end %>
 </p>
+</div>
+</div>

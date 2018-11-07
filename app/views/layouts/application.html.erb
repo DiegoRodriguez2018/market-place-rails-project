@@ -11,8 +11,21 @@
       <script defer  src="https://checkout.stripe.com/checkout.js"></script>
   </head>
 
-  <body>
+  <% if current_page?(root_url) %>
+    <%= render "layouts/forms_nav" %>
+  <% elsif current_page?(controller: 'devise/sessions', action: 'new') %>
+    <%= render "layouts/forms_nav" %>
+  <% elsif current_page?(controller: 'devise/passwords', action: 'new') %>
+    <%= render "layouts/forms_nav" %>
+  <% elsif current_page?(controller: 'devise/registrations', action: 'new') %>
+    <%= render "layouts/forms_nav" %>
+  <% else %>
     <%= render "layouts/nav" %>
+<% end %>
+
+  <body>
+  
     <%= yield %>
+
   </body>
 </html>
