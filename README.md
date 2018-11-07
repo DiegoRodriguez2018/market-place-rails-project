@@ -523,10 +523,6 @@ Stripe - what manages and protects all credit card information
 Pundit - controls authorisations and what users can see.)
 
 ### 23. Research what your legal obligations are in relation to handling user data.
-<<<<<<< HEAD
-
-=======
->>>>>>> e65b771aff894e9ea4624e58f5c46ee043f04fb9
 In handling user data, we must make sure we stick to privacy laws.
 As a business owner, it is our responsibility to protect personal information from things like; theft, loss, unauthorised access and modification.
 As permitted under the Privacy Act 1988, we have to take reasonable steps to destroy or de-identify personal information once it is no longer needed.
