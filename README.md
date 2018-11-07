@@ -331,6 +331,7 @@ Orders one to many products
 )
 
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
+
 * Category
 has_many :products
 * Order
@@ -344,9 +345,6 @@ has_many :orders
 * User
 has_many :products
 has_many :orders
-
-(Think about rails active record associations, has_many, has_one, belongs_to
-)
 
 ### 14. Provide your database schema design.
 
