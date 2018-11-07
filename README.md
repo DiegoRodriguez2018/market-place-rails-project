@@ -14,16 +14,23 @@ https://github.com/DiegoRodriguez2018/market-place-rails-project
 ## Project Description
 
 ### Problem Definition $ Project Purpose
+
+# EATHAN TO COMPLETE
 website purpose
 
 
 ---
 ###   Functionality & Features
+
+# EATHAN TO COMPLETE
+
 website Functionality
 website features
 
 ---
 ###  Screenshots
+
+# EATHAN TO COMPLETE
 
 INSERT Screenshots
 
@@ -60,13 +67,13 @@ Users:
 
 Developers:
 Recommended software requirements for developers:  
-    1. Ruby 2.4.1
-    2. Ruby on Rails 5.2.1
-    3. Postgresql
+  1. Ruby 2.4.1
+  2. Ruby on Rails 5.2.1
+  3. Postgresql
 
 Developers also will need an active account for the following services:
-    1. Stripe
-    2. Amazon Web Services (AWS)  and Heroku if planning to deploy.
+  1. Stripe
+  2. Amazon Web Services (AWS)  and Heroku if planning to deploy.
 
 ---
 #### Running locally
@@ -111,7 +118,8 @@ Tip: You can open your heroku app website from terminal by typing: `heroku open`
 
 #### Design process
 
-<EATHAN TO COMPLETE>
+# EATHAN TO COMPLETE
+
 
 ---
 ### User Stories:
@@ -434,3 +442,5 @@ Stripe - what manages and protects all credit card information
 Pundit - controls authorisations and what users can see.)
 
 ### 23. Research what your legal obligations are in relation to handling user data.
+
+# EATHAN TO COMPLETE
