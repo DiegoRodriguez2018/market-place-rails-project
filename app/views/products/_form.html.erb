@@ -13,32 +13,32 @@
 
   <div class="text">
     <%= form.label :title %><br/>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, :required => true %>
   </div>
 
   <div class="text">
     <%= form.label :price %><br/>
-    <%= form.text_field :price, value: number_with_precision((product.price||0)/100.0, :precision => 2) %>
+    <%= form.text_field :price, :required => true, value: number_with_precision((product.price||0)/100.0, :precision => 2) %>
   </div>
 
   <div class="text">
     <%= form.label :description %><br/>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, :required => true %>
   </div>
 
   <div class="text">
     <%= form.label :stock %><br/>
-    <%= form.number_field :stock %>
+    <%= form.number_field :stock, :required => true %>
   </div>
 
   <div class="text">
     <%= form.label :category %><br/>
-    <%= select_tag(:category, options_for_select(@select_options,@select_options.length)) %>
+    <%= select_tag(:category, options_for_select(@select_options,@select_options.length), :required => true )%>
   </div>
 
   <div class="text">
     <%= form.label :image %><br/>
-    <%= form.file_field :image %>
+    <%= form.file_field :image, :required => true %>
   </div>
 
   <div class="btn-1">
