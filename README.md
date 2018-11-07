@@ -465,4 +465,6 @@ Pundit - controls authorisations and what users can see.)
 
 ### 23. Research what your legal obligations are in relation to handling user data.
 
-# EATHAN TO COMPLETE
+In handling user data, we must make sure we stick to privacy laws. 
+As a business owner, it is our responsibility to protect personal information from things like; theft, loss, unauthorised access and modification. 
+As permitted under the Privacy Act 1988, we have to take reasonable steps to destroy or de-identify personal information once it is no longer needed.
