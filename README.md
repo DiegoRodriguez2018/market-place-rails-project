@@ -243,7 +243,7 @@ Screenshots of Trello board(s)
 * An strech goal for the project will be to provide a database on various camouflage related history and patterns.
 
 ### 2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
-Currently no similar camouflage orientated marketplace exists, and since 1943 camouglage has being incorporated in the fashion world. In modern times camouflage fashion has become an important market and we believe it hasn't been exploited fully. 
+Currently no similar camouflage orientated marketplace exists, and since 1943 camouflage has being incorporated in the fashion world. In modern times camouflage fashion has become an important market and we believe it hasn't been exploited fully.
 
 ### 3. Describe the project you will be conducting and how your App will address these needs.
 We will be building a two sided marketplace that offers a location for users to buy, sell and trade camouflage clothing and items. As a strech goal it will also provide users with information pertaining to all aspects of camouflage in a global context.
@@ -280,15 +280,32 @@ Yes go into detail about MVC, don’t describe any model associations yet
 )
 
 ### 9. Explain the different high-level components (abstractions) in your App.
-(you could talk how ruby gems are an abstraction from your own ruby code
-also about how active record is an abstraction of sql)
+
+As an beginner-level Rails developer I'm finding rails is a perfect level of abstraction for most types of web development.
+However I'm finding that we use Gems to an extent that it's often pretty difficult to figure out what's going on in the code. I've had a pretty hard time digging through code to figure out how things work, and I'm struggling to see the payoff of this approach.
 
 
 ### 10. Detail any third party services that your App will use.
-Devise, Stripe, Pundit, Heroku, AWS
+
+Devise - So users can signup, login and logout. Authentication.
+Stripe - We're using the stripe API in our code so that we can process credit card payments.
+Pundit - Is used as a user authorization method.
+Heroku - We're using Heroku to host our live website. So it can be see via the URL supplied.
+AWS - Amazon Web Services is being used to host our images  
 
 ### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay,   Airbnb).
-User, Product, Message, Conversation, Order, OrderToProduct, Shopping cart,
+
+Our marketplace is comparable in data structure to any other two sided marketplace.
+A user is able to both list items for sale as well as purchase products.
+
+The user is able to see items for sale as-well as list items they would like to sell.
+The user can both pay and receive payments.
+Order products and receive orders.
+View their orders as-well as see orders made.
+Upload images to represent what they're selling.
+etc.
+
+User, Product, Order, OrderToProduct
 
 ### 12. Discuss the database relations to be implemented.
 User many to many  products
@@ -418,7 +435,7 @@ end
 ### 17. Describe the way tasks are allocated and tracked in your project.
 We decided to use GitHub Projects to manage our tasks. Before start, each morning we had a chat to discuss what were the goals for the day and what each team member is working on. We also discussed what were the current issues we were facing and then as a team created a few issues in GitHub and allocated a responsible team member.
 
-Communication continued during the day but usually everyone was assinged different tasks and everytime we completed an important stage we added a commit comment to close the issue in GitHub. 
+Communication continued during the day but usually everyone was assinged different tasks and everytime we completed an important stage we added a commit comment to close the issue in GitHub.
 
 ### 18. Discuss how Agile methodology is being implemented in your project.
 We implemented agile methodolgy by:
@@ -426,10 +443,10 @@ We implemented agile methodolgy by:
 * Deploying and getting customer feedback early.
 * Focusing in software functionality first.
 * Implementing daily morning meetups allowing face to face conversation were we could discuss goals and issues ahead.
-* Aim for a sustainable development so we could maintain a constant pace. 
+* Aim for a sustainable development so we could maintain a constant pace.
 
 ### 19. Provide an overview and description of your Source control process.
-We decided that each team member was going to have access to push and authorize pull request in GitHub. We found this helped us to develop and deploy our website fast but also required us to communicate often and have a discussion of what changes we were implementing. Aslo, depending of the complexity of the pull request we reviewed the code as a team in order to avoid issues later. 
+We decided that each team member was going to have access to push and authorize pull request in GitHub. We found this helped us to develop and deploy our website fast but also required us to communicate often and have a discussion of what changes we were implementing. Aslo, depending of the complexity of the pull request we reviewed the code as a team in order to avoid issues later.
 
 ### 20. Provide an overview and description of your Testing process.
 
