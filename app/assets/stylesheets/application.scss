@@ -137,6 +137,7 @@ float: left;
         text-decoration: none;
         &:hover {
         color: rgb(229, 246, 255);
+        text-decoration: none;
         }
       }
 }
@@ -175,6 +176,7 @@ float: left;
     //   padding: 0px 4px 0px 4px; //modification doesn't show..
     //   text-decoration: none;
       &:hover {
+        text-decoration: none;
       color: rgb(206, 206, 206);
       }
     }
@@ -232,8 +234,7 @@ float: left;
     margin-left: 1em;
     text-align: left;
     color: black;
-    padding-right: 2em;
-    // margin-top: 9em;
+    padding-top: 2em;
 }
 .text-login {
     text-align: right;
@@ -344,6 +345,7 @@ height: 400px;
   .blackglossyCSSButtonbutton
 {
     /* General  */
+    text-color: silver;
 
 
     /* Size */
@@ -391,6 +393,7 @@ height: 400px;
 
   &:hover {
     text-decoration: none;
+    color: white;
     /* General  */
 
 
