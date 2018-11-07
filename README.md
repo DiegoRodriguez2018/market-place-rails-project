@@ -281,6 +281,7 @@ Some of the software used in the development of this app include:
 For the current website requirements we could have used sqlite but thinking bout scalability we decided to base our app on postrgresql, as it supports a wide range of data types allowing us to upgrade our website in the future. 
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
+<<<<<<< HEAD
 postgres database with this talbes: (show schema, or postgress output)
 
 (Here I would talk about the specifics of postgres, how it connects to your models, how it sits in overall MVC
@@ -340,6 +341,10 @@ Products has many users ....
 ![img](docs/database-design.png)
 
 #### Activer Record Schema:
+=======
+
+The postgresql elements implemented in this website are as follows:
+>>>>>>> readme1.9
 
 ```ruby
 ActiveRecord::Schema.define(version: 2018_10_30_045941) do
