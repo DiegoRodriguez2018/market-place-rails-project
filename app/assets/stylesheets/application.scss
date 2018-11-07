@@ -234,7 +234,7 @@ float: left;
     margin-left: 1em;
     text-align: left;
     color: black;
-    padding-top: 2em;
+    // padding-top: 2em;
 }
 .text-login {
     text-align: right;
@@ -245,8 +245,10 @@ float: left;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.01em;
+    transform: scale3d(1,1,1);
+    z-index: 1;
     margin-top: -2.5em;
-    padding-bottom: 2.9em;
+    padding-bottom: 3.7em;
     padding-left: 1em;
 }
 
