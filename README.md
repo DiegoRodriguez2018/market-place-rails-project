@@ -240,20 +240,44 @@ Screenshots of Trello board(s)
 
 ### 1. What is the need (i.e. challenge) that you will be addressing in your project?
 * To build a marketplace where users can buy, sell, trade camouflage patterns, clothing and related products.
-* The website will also provide a database on various camouflage related history and patterns.
+* An strech goal for the project will be to provide a database on various camouflage related history and patterns.
 
 ### 2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
-* Currently no purely camouflage orientated marketplace exists.
+Currently no similar camouflage orientated marketplace exists, and since 1943 camouglage has being incorporated in the fashion world. In modern times camouflage fashion has become an important market and we believe it hasn't been exploited fully. 
 
 ### 3. Describe the project you will be conducting and how your App will address these needs.
-* We will be building a two sided marketplace that offers a location for users to buy, sell and trade camouflage clothing and items. It will also provide users with information pertaining to all aspects of DPM.
+We will be building a two sided marketplace that offers a location for users to buy, sell and trade camouflage clothing and items. As a strech goal it will also provide users with information pertaining to all aspects of camouflage in a global context.
 
 ### 4. Describe the network infrastructure the App may be based on.
-heroku, devise, stripe, aws
+The network infrastructure for this app include the following services:
+  1. Heroku
+  2. Devise
+  3. Stripe
+  4. Amazon Web Services
+
+As our Heroku app server is based in the US, we decided to base our AWS server in the US as well (us-east-1). As the servers are going to be located close to each other we hope the performance of our web app to be improved.
 
 ### 5. Identify and describe the software to be used in your App.
-
+Some of the software used in the development of this app include:
+* HTML
+* CSS
+* SCSS
+* Ruby on Rails
+    * Active Storage
+    * Active Record
+* Amazon Web Services
+* Heroku
+* Devise
+* Pundit
+* Bootstrap
+* GIT
+* GitHub
+* GitHub Projects
+* Figma
+  
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
+We decided to use postgresql for our database as it supports a wide range of data types allowing us to upscale our website
+
 db design structure
 
 (Here I would talk about how postgres is different to sqlite, justify how postgres is way more powerful and how it fits really nicely into rails.
@@ -266,8 +290,6 @@ postgres database with this talbes: (show schema, or postgress output)
 )
 
 ### 8. Describe the architecture of your App.
-
-
 (Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
 
 Yes go into detail about MVC, don’t describe any model associations yet
