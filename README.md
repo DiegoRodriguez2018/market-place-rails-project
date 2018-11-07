@@ -124,7 +124,13 @@ Tip: You can open your heroku app website from terminal by typing: `heroku open`
 
 #### Design process
 
-# EATHAN TO COMPLETE
+Our design process started by gathering inspiration. Camouflage from a design perspective can be tricky to work with sometimes, as it can present many colours and tones that may not always work too well together in terms of designing a polished UI. We began by looking at how others used camouflage, and how they incorperated it in their designs. Primarily we saw it being used as an accent or pop feature, but also used in greyscale, as it can take the sometimes problematic colour work out of the equation. 
+We then looked at other websites we found appealing. Looking at features the reflected in our app. Such as;
+* E-commerce sites for examples on whats standard.
+* Product page displays - various options
+* splash page ideas:
+we looked specifically at how we can use a splash page, but still use minimum amount of clicks to get to a purchase.
+* Forms used on websites to deploy data to a database.
 
 
 ---
@@ -338,18 +344,18 @@ Orders one to many products
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other
 
 * Category
-has_many :products
+  * has_many :products
 * Order
-belongs_to :user
-belongs_to :product
+  * belongs_to :user
+  * belongs_to :product
 * Product
-belongs_to :user
-belongs_to :category
-has_one_attached :image
-has_many :orders
+  * belongs_to :user
+  * belongs_to :category
+  * has_one_attached :image
+  * has_many :orders
 * User
-has_many :products
-has_many :orders
+  * has_many :products
+  * has_many :orders
 
 ### 14. Provide your database schema design.
 
