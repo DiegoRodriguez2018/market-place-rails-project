@@ -203,7 +203,6 @@ Screenshots of Trello board(s)
 ![Image](docs/githubprojects6.png) Github Projects Board #6
 ![Image](docs/githubprojects7.png) Github Projects Board #7
 
-
 ---
 
 ###  Problems Encountered
@@ -228,26 +227,22 @@ Screenshots of Trello board(s)
 
 * Heroku Image Seeding: The next challenge was to seed some images in the Heroku repository. The process was pretty much the same with the only difference we had to run Heroku run rails db:seed`
 
-
-
 ---
 # FAQ
 
 ### 1. What is the need (i.e. challenge) that you will be addressing in your project?
-
 * To build a marketplace where users can buy, sell, trade camouflage patterns, clothing and related products.
 * The website will also provide a database on various camouflage related history and patterns.
 
 ### 2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
-
 * Currently no purely camouflage orientated marketplace exists.
 
 ### 3. Describe the project you will be conducting and how your App will address these needs.
-
 * We will be building a two sided marketplace that offers a location for users to buy, sell and trade camouflage clothing and items. It will also provide users with information pertaining to all aspects of DPM.
 
 ### 4. Describe the network infrastructure the App may be based on.
 heroku, devise, stripe, aws
+
 ### 5. Identify and describe the software to be used in your App.
 
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
@@ -301,8 +296,8 @@ Products has many users ....
 ![img](docs/database-design.png)
 
 #### Activer Record Schema:
-```ruby
 
+```ruby
 ActiveRecord::Schema.define(version: 2018_10_30_045941) do
 
   # These are extensions that must be enabled in order to support this database
@@ -378,12 +373,7 @@ ActiveRecord::Schema.define(version: 2018_10_30_045941) do
   add_foreign_key "products", "categories"
   add_foreign_key "products", "users"
 end
-
-
-
 ```
-
-
 
 ### 15. Provide User stories for your App.
 * Refer to UserStories in README
@@ -411,18 +401,36 @@ end
 ### Show Page Wireframes:
 ![Image](docs/show-page.png)
 
-
 ### 17. Describe the way tasks are allocated and tracked in your project.
+We decided to use GitHub Projects to manage our tasks. Before start, each morning we had a chat to discuss what were the goals for the day and what each team member is working on. We also discussed what were the current issues we were facing and then as a team created a few issues in GitHub and allocated a responsible team member.
+
+Communication continued during the day but usually everyone was assinged different tasks and everytime we completed an important stage we added a commit comment to close the issue in GitHub. 
+
 ### 18. Discuss how Agile methodology is being implemented in your project.
+We implemented agile methodolgy by:
+* Regularly testing our app
+* Deploying and getting customer feedback early.
+* Focusing in software functionality first.
+* Implementing daily morning meetups allowing face to face conversation were we could discuss goals and issues ahead.
+* Aim for a sustainable development so we could maintain a constant pace. 
+
 ### 19. Provide an overview and description of your Source control process.
+We decided that each team member was going to have access to push and authorize pull request in GitHub. We found this helped us to develop and deploy our website fast but also required us to communicate often and have a discussion of what changes we were implementing. Aslo, depending of the complexity of the pull request we reviewed the code as a team in order to avoid issues later. 
+
 ### 20. Provide an overview and description of your Testing process.
+
 (As Scott just mentioned on slack feedback from another student would suffice.
 )
+
+
+
 ### 21. Discuss and analyse requirements related to information system security.
 (Make this a more general analysis of the ethics behind handling user data.
 )
+
 ### 22. Discuss methods you will use to protect information and data.
 (Encryption - hashing passwords automatically.
 Stripe - what manages and protects all credit card information
 Pundit - controls authorisations and what users can see.)
+
 ### 23. Research what your legal obligations are in relation to handling user data.
