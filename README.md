@@ -115,7 +115,7 @@ Tip: You can open your heroku app website from terminal by typing: `heroku open`
 ### Design Documentation
 
 #### Design process
-Our design process started by gathering inspiration. Camouflage from a design perspective can be tricky to work with sometimes, as it can present many colours and tones that may not always work too well together in terms of designing a polished UI. We began by looking at how others used camouflage, and how they incorperated it in their designs. Primarily we saw it being used as an accent or pop feature, but also used in greyscale, as it can take the sometimes problematic colour work out of the equation. 
+Our design process started by gathering inspiration. Camouflage from a design perspective can be tricky to work with sometimes, as it can present many colours and tones that may not always work too well together in terms of designing a polished UI. We began by looking at how others used camouflage, and how they incorperated it in their designs. Primarily we saw it being used as an accent or pop feature, but also used in greyscale, as it can take the sometimes problematic colour work out of the equation.
 We then looked at other websites we found appealing. Looking at features the reflected in our app. Such as;
 * E-commerce sites for examples on whats standard.
 * Product page displays - various options
@@ -272,7 +272,7 @@ Some of the software used in the development of this app include:
 * Figma
 
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
-For the current website requirements we could have used sqlite but thinking bout scalability we decided to base our app on postrgresql, as it supports a wide range of data types allowing us to upgrade our website in the future. 
+For the current website requirements we could have used sqlite but thinking bout scalability we decided to base our app on postrgresql, as it supports a wide range of data types allowing us to upgrade our website in the future.
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
 The postgresql elements implemented in this website are as follows:
@@ -356,18 +356,21 @@ end
 ```
 
 ### 8. Describe the architecture of your App.
-(Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
 
-Yes go into detail about MVC, don’t describe any model associations yet
-)
+The architecture of our application is based on the MVC model.
+
+The (M)Model represents what the application is. In terms of what the View renders.
+(V)View data container; contains all the logic neccessary to have the View render data specific to directory page.
+(C)Controllers are responsible for controlling the flow of the application execution. When you make a request, the relevent controller is responsible for returning the response to that request. The controller can perform one or more actions. The controller represents what the app does, relevent to what the user is requesting. It then tells the view and model what to render.
+
 
 ### 9. Explain the different high-level components (abstractions) in your App.
 So in this project there is a few high-level components that handle a series of low-level processes. Some of them include:
 1. Active Record linking our Rails Models to the postgresql database, handling SQL queries and table relationships.
-2. Active Storage linking our Rails Models to the local file storage. 
+2. Active Storage linking our Rails Models to the local file storage.
 3. Embeded ruby files, allowing to generate html documents based on ruby code.
-4. Devise allowing to implement secure encryption and authentication. 
-5. Pundit allowing to implement autherization. 
+4. Devise allowing to implement secure encryption and authentication.
+5. Pundit allowing to implement autherization.
 
 ### 10. Detail any third party services that your App will use.
 * Devise - So users can signup, login and logout. Authentication.
@@ -380,19 +383,32 @@ So in this project there is a few high-level components that handle a series of 
 The data structure of similar marketplace apps will include:
 
 * A User Model, which will allow to both sell or purchase a product.
-* A Product Model, that will display important information about the items for sale. 
-* A Category Model to allow to organise our items. 
-* An Order Model that will allow to keep track of the transactions and shipping details. 
-* A Charge Model to keep track of the electronic transactions. 
-* A Shopping Cart to allow keeping track of multiple orders. 
-  
+* A Product Model, that will display important information about the items for sale.
+* A Category Model to allow to organise our items.
+* An Order Model that will allow to keep track of the transactions and shipping details.
+* A Charge Model to keep track of the electronic transactions.
+* A Shopping Cart to allow keeping track of multiple orders.
+
 
 ### 12. Discuss the database relations to be implemented.
-User many to many  products
-Orders one to many products
 
-(This is more regarding why we need a join table in certain instances in your app, why we need a foreign keys in different tables, think about the stuff we did when we first started sql
-)
+Each category has many products within in.
+* Category
+  * has_many :products
+Each order belongs to a single user and product.
+* Order
+* belongs_to :user
+* belongs_to :product
+Every product belongs to a single user and category. It has a single image. It can have many orders associated with it.
+* Product
+  * belongs_to :user
+  * belongs_to :category
+  * has_one_attached :image
+  * has_many :orders
+Each user can have many products posted and make many orders.
+* User
+  * has_many :products
+  * has_many :orders
 
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other
 
@@ -448,7 +464,7 @@ Orders one to many products
 * As a Seller, I want to pay with my credit card, so that I can complete a purchase.
 * As a Seller, I want to search for camouflage for types relating to specific environments and countries, so that I can find a suitable camouflage for my needs.
 * As a Seller, I want to receive an e-mail receipt after purchase has been completed, so that I can see the purchasing details.
-  
+
 ### 16. Provide Wireframes for your App.
 ### Inspiration:
 ![Image](docs/inspiration.png)
