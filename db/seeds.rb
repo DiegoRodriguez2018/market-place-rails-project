@@ -17,7 +17,7 @@ User.create(email:"user3@gmail.com", password:"123456")
 
 
 
-categories = ["Woodland and Jungle", "Dessert and Beach", "Urban"]
+categories = ["Woodland and Jungle", "Desert and Beach", "Urban"]
 
 categories.each do |category|
     Category.create(name: category)
