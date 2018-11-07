@@ -335,7 +335,8 @@ Orders one to many products
 (This is more regarding why we need a join table in certain instances in your app, why we need a foreign keys in different tables, think about the stuff we did when we first started sql
 )
 
-### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.
+### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other
+
 * Category
 has_many :products
 * Order
@@ -349,9 +350,6 @@ has_many :orders
 * User
 has_many :products
 has_many :orders
-
-(Think about rails active record associations, has_many, has_one, belongs_to
-)
 
 ### 14. Provide your database schema design.
 
