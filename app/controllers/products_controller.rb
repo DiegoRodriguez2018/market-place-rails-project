@@ -23,6 +23,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    puts current_user.id, @product.user
     authorize @product
   end
 
