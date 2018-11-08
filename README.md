@@ -391,24 +391,18 @@ The data structure of similar marketplace apps will include:
 
 
 ### 12. Discuss the database relations to be implemented.
+In our current database the main components are:
+1. User
+2. Product
+3. Category
+4. Order
 
-Each category has many products within in.
-* Category
-  * has_many :products
-Each order belongs to a single user and product.
-* Order
-* belongs_to :user
-* belongs_to :product
-Every product belongs to a single user and category. It has a single image. It can have many orders associated with it.
-* Product
-  * belongs_to :user
-  * belongs_to :category
-  * has_one_attached :image
-  * has_many :orders
-Each user can have many products posted and make many orders.
-* User
-  * has_many :products
-  * has_many :orders
+And the relationships between them are as follows:
+1. User has a one to many products.
+2. User has a one to many orders. 
+3. Product has a one to one images.
+4. Product has a one to many categories.
+5. Orders has a one to many products. 
 
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other
 
