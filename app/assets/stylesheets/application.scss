@@ -418,26 +418,24 @@ section{
   background-color: #ffffff;
   // padding-top: 20px;
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 15vh;
   // margin-left: 210px;
   justify-content: center;
   align-self: center;
-  overflow: scroll;
-  // box-shadow: -4px 4px 40px #949494;
 
-width: auto;
-height: 60vh;
+
+width: 60vh;
+height: 50vh;
 .about-text {
 
-    section{
-      width: 500px;
-      margin:50px auto;
+
       p{
         font-size:20px;
         font-weight: bold;
         margin-bottom: 15px;
-      }
-    } 
+      } 
+
+    
   }
 }
 
