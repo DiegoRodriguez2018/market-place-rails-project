@@ -33,8 +33,8 @@ The functionality and features of our marketplace include:
 ###  Screenshots
 
 ![img](docs/sc1.png)
-![img](docs/sc2.png)
-![img](docs/sc6.png)
+![img](docs/sc22.png)
+![img](docs/sc66.png)
 ![img](docs/sc3.png)
 ![img](docs/sc4.png)
 ![img](docs/sc5.png)
