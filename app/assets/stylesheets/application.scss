@@ -247,6 +247,9 @@
     margin-left: 1em;
     text-align: left;
     color: black;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
     // padding-top: 2em;
 }
 .text-nav {
@@ -316,25 +319,50 @@
 }
 
 .show-styles {
+display: flex;
+flex-flow: row;
   border: 2px solid #ffffff;
   background-color: #ffffff;
-  padding-top: 20px;
+  // padding-top: 20px;
   text-align: center;
-  margin-top: 30vh;
-  // margin-left: 210px;
+  margin-left: 15vw;
+  margin: 0 auto;
+  margin-top: 10vh;
   justify-content: center;
-  
+  align-self: center;
+  // overflow: scroll;
   // box-shadow: -4px 4px 40px #949494;
+width: fit-content;
+height: auto;
+z-index: 100;
 
-width: 400px;
-height: 500px;
-
-a{
-font-family: "Antonio", sans-serif;
-font-size:13px;
-text-transform: uppercase;
-letter-spacing: 0.01em;
+.subtext {
+  font-size: 1em;
+  // font-size: 20.8px;
+  font-family: "Antonio", sans-serif;
+  // font-weight: 1;
+  text-align: center;
+  text-transform: uppercase;
+  // margin-left: 20vw;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
+
+img{
+  height: 100%;
+  width: 30vw;
+}
+
+.price {
+  font-size:20px;
+  padding-bottom: 1em;
+}
+
+  p{
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
 }
 
 .sign-in-styles {
@@ -382,6 +410,35 @@ section{
     margin-bottom: 15px;
   }
 }
+}
+
+.about-styles {
+
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  // padding-top: 20px;
+  text-align: center;
+  margin-top: 10vh;
+  // margin-left: 210px;
+  justify-content: center;
+  align-self: center;
+  overflow: scroll;
+  // box-shadow: -4px 4px 40px #949494;
+
+width: auto;
+height: 60vh;
+.about-text {
+
+    section{
+      width: 500px;
+      margin:50px auto;
+      p{
+        font-size:20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+    } 
+  }
 }
 
 .orders-styles {
