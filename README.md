@@ -503,10 +503,13 @@ We implemented agile methodology by:
 We decided that each team member was going to have access to push and authorize pull request in GitHub. We found this helped us to develop and deploy our website fast but also required us to communicate often and have a discussion of what changes we were implementing. Also, depending of the complexity of the pull request we reviewed the code as a team in order to avoid issues later.
 
 ### 20. Provide an overview and description of your Testing process.
+During the development process we tested our application regularly, some of the testing procedures we implemented included:
 
-(As Scott just mentioned on slack feedback from another student would suffice.
-)
-GET BIANCAS GROUP TO DO
+1. Testing of database behaivour in rails console. 
+2. Testing of live version performance. 
+3. Testing of pundit responses when a non-authorised user tried to modified the database. 
+4. Testing of Stripe correct functionality both in the live version as in the Stripe account. 
+5. Testing of the AWS storage functionality. 
 
 ### 21. Discuss and analyse requirements related to information system security.
 
