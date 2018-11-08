@@ -403,7 +403,7 @@ And the relationships between them are as follows:
 3. Product has a one to one images.
 4. Product has a one to many categories.
 5. Orders has a one to many products. 
-
+   
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other
 
 * Category
