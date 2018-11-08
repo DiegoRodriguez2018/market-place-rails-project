@@ -32,9 +32,11 @@ The functionality and features of our marketplace include:
 ---
 ###  Screenshots
 
-# EATHAN TO COMPLETE
-
-INSERT Screenshots
+![img](docs/sc1.png)
+![img](docs/sc2.png)
+![img](docs/sc3.png)
+![img](docs/sc4.png)
+![img](docs/sc5.png)
 
 ---
 ###  Tech Stack
@@ -395,16 +397,19 @@ The data structure of similar marketplace apps will include:
 Each category has many products within in.
 * Category
   * has_many :products
+
 Each order belongs to a single user and product.
 * Order
 * belongs_to :user
 * belongs_to :product
+
 Every product belongs to a single user and category. It has a single image. It can have many orders associated with it.
 * Product
   * belongs_to :user
   * belongs_to :category
   * has_one_attached :image
   * has_many :orders
+
 Each user can have many products posted and make many orders.
 * User
   * has_many :products
