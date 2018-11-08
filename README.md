@@ -34,6 +34,7 @@ The functionality and features of our marketplace include:
 
 ![img](docs/sc1.png)
 ![img](docs/sc2.png)
+![img](docs/sc6.png)
 ![img](docs/sc3.png)
 ![img](docs/sc4.png)
 ![img](docs/sc5.png)
@@ -402,10 +403,10 @@ In our current database the main components are:
 
 And the relationships between them are as follows:
 1. User has a one to many products.
-2. User has a one to many orders. 
+2. User has a one to many orders.
 3. Product has a one to one images.
 4. Product has a one to many categories.
-5. Orders has a one to many products. 
+5. Orders has a one to many products.
 
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other
 
