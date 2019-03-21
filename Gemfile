@@ -73,5 +73,5 @@ gem "stripe", "~> 3.29"
 #Bootstrap gems
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 gem 'jquery-rails'
-gem "bootstrap", "~> 4.1"
+gem "bootstrap", "~> 4.3.1"
 gem "pundit", "~> 2.0"
