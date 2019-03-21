@@ -12,11 +12,10 @@ https://github.com/DiegoRodriguez2018/market-place-rails-project
 
 ---
 ## Project Description
-Disrupt, is a 2 sided marketplace for the selling and re-selling of Disruptive Pattern Materials(DPM). We provide an easy to use platform for users to easily post their materials, whether it be woodlands or desert. We cater to people looking for any style.
+Disrupt is a two-sided marketplace for the selling and re-selling of pattern materials. We provide an easy to use platform for users to easily post their materials, whether it be woodlands or desert. We cater to people looking for any style.
 
 ### Problem Definition & Project Purpose
-Before Disrupt, there was no availabe marketplace specific to DPM.
-The purpose of the project is provide a marketplace for the niche market but widespread insterest in Disruptive Pattern Materials, or camouflage.
+The purpose of the project is provide a marketplace for the niche market but widespread interest in pattern materials or camouflage.
 
 ---
 ###   Functionality & Features
@@ -28,10 +27,8 @@ The functionality and features of our marketplace include:
 * A page to create products to sell, depositing into a database.
 * 3 clicks to purchase a product.
 
-
 ---
 ###  Screenshots
-
 ![img](docs/sc1.png)
 ![img](docs/sc22.png)
 ![img](docs/sc66.png)
@@ -42,9 +39,9 @@ The functionality and features of our marketplace include:
 ---
 ###  Tech Stack
 The tech stack applied in this project include:
-* HTML
-* CSS
-* SCSS
+* HTML5
+* CSS3
+* SASS
 * Ruby on Rails
     * Active Storage
     * Active Record
@@ -101,7 +98,7 @@ Now you should be able to see a running version of the website when opening loca
 
 ---
 #### Deploying
-To deploy in heroku you will need to do the following:
+To deploy in Heroku you will need to do the following:
 1. Create Heroku and AWS (S3) accounts.
 2. In the AWS dashboard create a new bucket to store the website Active Record images.
 3. In Heroku dashboard create a new app and set up all your keys under settings>config vars. Here you need to set up your AWS and Stripe keys.
@@ -110,7 +107,7 @@ To deploy in heroku you will need to do the following:
   1. `heroku run rake db:migrate`
   2. `heroku run rake db:seed` (optional, just in case you want some sample data in your database)
 
-Now you should be able to go to your heroku app website  and see the live version of the webapp.
+Now you should be able to go to your heroku app website  and see the live version of the WebApp.
 
 Tip: You can open your heroku app website from terminal by typing: `heroku open`
 
@@ -118,7 +115,7 @@ Tip: You can open your heroku app website from terminal by typing: `heroku open`
 ### Design Documentation
 
 #### Design process
-Our design process started by gathering inspiration. Camouflage from a design perspective can be tricky to work with sometimes, as it can present many colours and tones that may not always work too well together in terms of designing a polished UI. We began by looking at how others used camouflage, and how they incorperated it in their designs. Primarily we saw it being used as an accent or pop feature, but also used in greyscale, as it can take the sometimes problematic colour work out of the equation.
+Our design process started by gathering inspiration. Camouflage from a design perspective can be tricky to work with sometimes, as it can present many colours and tones that may not always work too well together in terms of designing a polished UI. We began by looking at how others used camouflage, and how they incorporated it in their designs. Primarily we saw it being used as an accent or pop feature, but also used in greyscale, as it can take the sometimes problematic colour work out of the equation.
 We then looked at other websites we found appealing. Looking at features the reflected in our app. Such as;
 * E-commerce sites for examples on whats standard.
 * Product page displays - various options
@@ -363,17 +360,17 @@ end
 The architecture of our application is based on the MVC model.
 
 The (M)Model represents what the application is. In terms of what the View renders.
-(V)View data container; contains all the logic neccessary to have the View render data specific to directory page.
-(C)Controllers are responsible for controlling the flow of the application execution. When you make a request, the relevent controller is responsible for returning the response to that request. The controller can perform one or more actions. The controller represents what the app does, relevent to what the user is requesting. It then tells the view and model what to render.
+(V)View data container; contains all the logic necessary to have the View render data specific to directory page.
+(C)Controllers are responsible for controlling the flow of the application execution. When you make a request, the relevant controller is responsible for returning the response to that request. The controller can perform one or more actions. The controller represents what the app does, relevant to what the user is requesting. It then tells the view and model what to render.
 
 
 ### 9. Explain the different high-level components (abstractions) in your App.
 So in this project there is a few high-level components that handle a series of low-level processes. Some of them include:
 1. Active Record linking our Rails Models to the postgresql database, handling SQL queries and table relationships.
 2. Active Storage linking our Rails Models to the local file storage.
-3. Embeded ruby files, allowing to generate html documents based on ruby code.
+3. Embedded ruby files, allowing to generate html documents based on ruby code.
 4. Devise allowing to implement secure encryption and authentication.
-5. Pundit allowing to implement autherization.
+5. Pundit allowing to implement authorization.
 
 ### 10. Detail any third party services that your App will use.
 * Devise - So users can signup, login and logout. Authentication.
@@ -505,7 +502,7 @@ We decided that each team member was going to have access to push and authorize 
 ### 20. Provide an overview and description of your Testing process.
 During the development process we tested our application regularly, some of the testing procedures we implemented included:
 
-1. Testing of database behaivour in rails console. 
+1. Testing of database behaviour in rails console. 
 2. Testing of live version performance. 
 3. Testing of pundit responses when a non-authorised user tried to modified the database. 
 4. Testing of Stripe correct functionality both in the live version as in the Stripe account. 
