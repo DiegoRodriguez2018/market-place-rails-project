@@ -61,7 +61,7 @@ Users:
 1. Head to https://camo-market.herokuapp.com
 2. Sign up for a free account, you will need your email and a safe password.
 3. You will be presented with a few options:
-    1. Sell, will allow you to list your item and upload an image of it. It also will dislpay all the items you have listed in the past.
+    1. Sell, will allow you to list your item and upload an image of it. It also will display all the items you have listed in the past.
     2. Buy, will display a variety of items for sale in the platform.
     3. My Orders, will show all the previous orders that you have requested.
     4. About, will display a short description of our platform propose and vision.
@@ -80,7 +80,7 @@ Developers also will need an active account for the following services:
 #### Running locally
 To run locally you will need to do the following steps:
 1. Clone the repository by running: `git clone git@github.com:DiegoRodriguez2018/market-place-rails-project.git`
-2. In terminal open the market-place-rails-project folder and install the corresponing gems by running: `bundle install`
+2. In terminal open the market-place-rails-project folder and install the corresponding gems by running: `bundle install`
 3. To run locally you might also need to create a .env file and add the corresponding Stripe keys:
 ```
 PUBLISHABLE_KEY =<your publishable key>
@@ -141,7 +141,7 @@ we looked specifically at how we can use a splash page, but still use minimum am
 * As a Buyer, I want to see information about camouflage patterns, so I can find the right style for me.
 * As a Buyer, I want a user account page, so I can update my account information.
 * As a Buyer, I want to search for camouflage for types relating to specific environments and countries, so that I can find a suitable camouflage for my needs.
-* As a Buyer, I want to see what items I currently have listed for sale, so I can keep track ofwhat I’m selling.
+* As a Buyer, I want to see what items I currently have listed for sale, so I can keep track of what I’m selling.
 * As a Seller, I want to list items for sale, so that users can see and purchase my items.
 
 #### Seller User Stories:
@@ -172,12 +172,6 @@ We used figma to create a User Stories / Workflow Diagram of the project.
 ![Image](docs/colour-inspiration.png)
 ### Logo Inspiration:
 ![Image](docs/logo-inspiration.png)
-### Basic Wireframes:
-#### Desktop:
-![Image](docs/desktop1.png)
-![Image](docs/desktop2.png)
-#### Mobile:
-![Image](docs/mobile-wireframes.png)
 ### Splash Page Wireframes:
 #### Desktop:
 ![Image](docs/splash-desktop.png)
@@ -194,7 +188,7 @@ After discussing about our database structure we agreed to start our project wit
 
 ![img](docs/database-design.png)
 
-#### Database Infastructure
+#### Database Infrastructure
 As our Heroku app server is based in the US, we decided to base our AWS server in the US as well (us-east-1). As the servers are going to be located close to each other we hope the performance of our web app to be improved.
 
 ---
@@ -236,13 +230,13 @@ As our Heroku app server is based in the US, we decided to base our AWS server i
 
 ### 1. What is the need (i.e. challenge) that you will be addressing in your project?
 * To build a marketplace where users can buy, sell, trade camouflage patterns, clothing and related products.
-* An strech goal for the project will be to provide a database on various camouflage related history and patterns.
+* An stretch goal for the project will be to provide a database on various camouflage related history and patterns.
 
 ### 2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
 Currently no similar camouflage orientated marketplace exists, and since 1943 camouflage has being incorporated in the fashion world. In modern times camouflage fashion has become an important market and we believe it hasn't been exploited fully.
 
 ### 3. Describe the project you will be conducting and how your App will address these needs.
-We will be building a two sided marketplace that offers a location for users to buy, sell and trade camouflage clothing and items. As a strech goal it will also provide users with information pertaining to all aspects of camouflage in a global context.
+We will be building a two sided marketplace that offers a location for users to buy, sell and trade camouflage clothing and items. As a stretch goal it will also provide users with information pertaining to all aspects of camouflage in a global context.
 
 ### 4. Describe the network infrastructure the App may be based on.
 The network infrastructure for this app include the following services:
@@ -272,10 +266,10 @@ Some of the software used in the development of this app include:
 * Figma
 
 ### 6. Identify the database to be used in your App and provide a justification for your choice.
-For the current website requirements we could have used sqlite but thinking bout scalability we decided to base our app on postrgresql, as it supports a wide range of data types allowing us to upgrade our website in the future.
+For the current website requirements we could have used sqlite but thinking bout scalability we decided to base our app on postgres, as it supports a wide range of data types allowing us to upgrade our website in the future.
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance).
-The postgresql elements implemented in this website are as follows:
+The postgres elements implemented in this website are as follows:
 
 ```ruby
 ActiveRecord::Schema.define(version: 2018_10_30_045941) do
@@ -366,14 +360,14 @@ The (M)Model represents what the application is. In terms of what the View rende
 
 ### 9. Explain the different high-level components (abstractions) in your App.
 So in this project there is a few high-level components that handle a series of low-level processes. Some of them include:
-1. Active Record linking our Rails Models to the postgresql database, handling SQL queries and table relationships.
+1. Active Record linking our Rails Models to the postgres database, handling SQL queries and table relationships.
 2. Active Storage linking our Rails Models to the local file storage.
 3. Embedded ruby files, allowing to generate html documents based on ruby code.
 4. Devise allowing to implement secure encryption and authentication.
 5. Pundit allowing to implement authorization.
 
 ### 10. Detail any third party services that your App will use.
-* Devise - So users can signup, login and logout. Authentication.
+* Devise - So users can sign-up, login and logout. Authentication.
 * Stripe - We're using the stripe API in our code so that we can process credit card payments.
 * Pundit - Is used as a user authorization method.
 * Heroku - We're using Heroku to host our live website. So it can be see via the URL supplied.
@@ -424,71 +418,12 @@ And the relationships between them are as follows:
 ### 14. Provide your database schema design.
 ![img](docs/database-design.png)
 
-### 15. Provide User stories for your App.
-
-#### Buyer User Stories:
-* As a Buyer, I want to create an account, so that I can buy and browse on the website.
-* As a Buyer, I want to create an account, so that I can buy, sell and browse on the website.
-* As a Buyer, I want to pay with credit card, so I can complete a purchase.
-* As a Buyer, I want to message other users, so I can enquire about items and respond to enquiries.
-* As a Buyer, I want to search listings, so that I can find something specific within listed items.
-* As a Buyer, I want to edit or delete my existing listings, so that I can change the description or remove the listing.
-* As a Buyer, I want to add images to the item I’m listing, so that users can see a visual representation of the item listed.
-* As a Buyer, I want to add a description of the item I’m listing, so that users can view a description of the item listed.
-* As a Buyer, I want to list items for sale, so that users can see and purchase my items.
-* As a Buyer, I want to view listed items, so that I can choose whether or not to make a purchase.
-* As a Buyer, I want to create an account, so that I can buy and sell on the website.
-* As a Buyer, I want to receive an e-mail receipt, so that I can see the purchasing details.
-* As a Buyer, I want to see information about camouflage patterns, so I can find the right style for me.
-* As a Buyer, I want a user account page, so I can update my account information.
-* As a Buyer, I want to search for camouflage for types relating to specific environments and countries, so that I can find a suitable camouflage for my needs.
-* As a Buyer, I want to see what items I currently have listed for sale, so I can keep track ofwhat I’m selling.
-* As a Seller, I want to list items for sale, so that users can see and purchase my items.
-
-#### Seller User Stories:
-* As a Seller, I want to create an account, so that I can sell, manage my items, and browse on the website.
-* As a Seller, I want to message other users, so I can enquire about items and respond to enquiries.
-* As a Seller, I want to view listed items, so that I can choose whether or not to make a purchase.
-* As a Seller, I want to search listings, so that I can find something specific within listed items.
-* As a Seller, I want to find information about camouflage patterns, so I know what it is and can be used for.
-* As a Seller, I want a user account page, so I can update my account information.
-* As a Seller, I want to edit or delete my existing listings, so that I can change the description or remove the listing.
-* As a Seller, I want to add images to the item I’m listing. , so that users can see a visual representation of the item listed.
-* As a Seller, I want to add a description of the item I’m listing, so that users can view a description of the item listed.
-* As a Seller, I want to see what items I currently have listed for sale, so I can keep track of what I’m selling.
-* As a Seller, I want to pay with my credit card, so that I can complete a purchase.
-* As a Seller, I want to search for camouflage for types relating to specific environments and countries, so that I can find a suitable camouflage for my needs.
-* As a Seller, I want to receive an e-mail receipt after purchase has been completed, so that I can see the purchasing details.
-
-### 16. Provide Wireframes for your App.
-### Inspiration:
-![Image](docs/inspiration.png)
-### Colour Inspiration:
-![Image](docs/colour-inspiration.png)
-### Logo Inspiration:
-![Image](docs/logo-inspiration.png)
-### Basic Wireframes:
-#### Desktop:
-![Image](docs/desktop1.png)
-![Image](docs/desktop2.png)
-#### Mobile:
-![Image](docs/mobile-wireframes.png)
-### Splash Page Wireframes:
-#### Desktop:
-![Image](docs/splash-desktop.png)
-#### Mobile:
-![Image](docs/splash-mobile.png)
-### Index Page Wireframes:
-![Image](docs/products-page.png)
-### Show Page Wireframes:
-![Image](docs/show-page.png)
-
-### 17. Describe the way tasks are allocated and tracked in your project.
+### 15. Describe the way tasks are allocated and tracked in your project.
 We decided to use GitHub Projects to manage our tasks. Before start, each morning we had a chat to discuss what were the goals for the day and what each team member is working on. We also discussed what were the current issues we were facing and then as a team created a few issues in GitHub and allocated a responsible team member.
 
 Communication continued during the day but usually everyone was assigned different tasks and every-time we completed an important stage we added a commit comment to close the issue in GitHub.
 
-### 18. Discuss how Agile methodology is being implemented in your project.
+### 16. Discuss how Agile methodology is being implemented in your project.
 We implemented agile methodology by:
 * Regularly testing our app
 * Deploying and getting customer feedback early.
@@ -496,10 +431,10 @@ We implemented agile methodology by:
 * Implementing daily morning meetups allowing face to face conversation were we could discuss goals and issues ahead.
 * Aim for a sustainable development so we could maintain a constant pace.
 
-### 19. Provide an overview and description of your Source control process.
+### 17. Provide an overview and description of your Source control process.
 We decided that each team member was going to have access to push and authorize pull request in GitHub. We found this helped us to develop and deploy our website fast but also required us to communicate often and have a discussion of what changes we were implementing. Also, depending of the complexity of the pull request we reviewed the code as a team in order to avoid issues later.
 
-### 20. Provide an overview and description of your Testing process.
+### 18. Provide an overview and description of your Testing process.
 During the development process we tested our application regularly, some of the testing procedures we implemented included:
 
 1. Testing of database behaviour in rails console. 
@@ -508,17 +443,17 @@ During the development process we tested our application regularly, some of the 
 4. Testing of Stripe correct functionality both in the live version as in the Stripe account. 
 5. Testing of the AWS storage functionality. 
 
-### 21. Discuss and analyse requirements related to information system security.
+### 19. Discuss and analyse requirements related to information system security.
 
 * We don't want sensitive user information to be leaked, read or obtained by third parties or users who are not authorized to do so.
 So for this reason we have implemented the items listed in the following question.
 
-### 22. Discuss methods you will use to protect information and data.
+### 20. Discuss methods you will use to protect information and data.
 * We have taken measures to maintain user confidentiality and information security.
 Citing the use of API's such as Stripe which will encrypt and protect user credit-card information when it is used to make purchases.
 * We have implemented Ruby Gems which offer both, authentication, and authorization processes for user accounts. This offer Users the security of knowing no one else will be able to edit or see they're information unless logged in from the authorised account.
 
-### 23. Research what your legal obligations are in relation to handling user data.
+### 21. Research what your legal obligations are in relation to handling user data.
 In handling user data, we must make sure we stick to privacy laws.
 As a business owner, it is our responsibility to protect personal information from things like; theft, loss, unauthorised access and modification.
 As permitted under the Privacy Act 1988, we have to take reasonable steps to destroy or de-identify personal information once it is no longer needed.

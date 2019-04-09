@@ -78,4 +78,4 @@ gem "bootstrap", ">= 4.3.1"
 gem "pundit", "~> 2.0"
 
 # Use SCSS for stylesheets
-# gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0'
